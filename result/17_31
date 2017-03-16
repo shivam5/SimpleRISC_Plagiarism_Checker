@@ -1,0 +1,67 @@
+(17,31)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/matrix(1).s
+Match - 20.9302%
+
+The matched blocks are :
+1st program : 
+Line 2:       mov r0,3   @N
+Line 3:       mov r1,0x100    
+Line 4:       mov r2,0x200    
+Line 5:       mov r3,0x300
+Line 6:       add r13,r0,1
+
+2nd program : 
+Line 41:	mov r4,0
+Line 42:	mov r5,0
+Line 43:	mov r6,0
+Line 44:	mov r7,0
+Line 45:	b .nested_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+2nd program : 
+Line 90:        mov r4,0
+Line 91:        mov r5,0
+Line 92:        b .p_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 89:       mul r7,r4,r13  @3*i
+Line 90:       add r7,r7,r6  @3*i+k
+Line 91:       mul r7,r7,4    @(3*i+k)*4
+Line 92:       add r7,r7,r1   @(3*i+k)*4+base address of A
+Line 93:       ld r8,0[r7]
+Line 95:       mul r9,r6,r13  @3*k
+Line 96:       add r9,r9,r5  @3*k+j
+Line 97:       mul r9,r9,4    @(3*k+j)*4
+Line 98:       add r9,r9,r2   @(3*k+j)*4+base address of B 
+Line 99:       ld r10,0[r9]
+Line 101:       mul r11,r8,r10
+Line 102:       add r12,r12,r11
+Line 103:       add r6,r6,1
+Line 104:       b .loop6
+
+2nd program : 
+Line 74:		mul r8,r0,r4
+Line 75:		add r8,r8,r6
+Line 76:		mul r8,r8,4
+Line 77:		add r9,r1,r8
+Line 78:		ld r10,0[r9]
+Line 79:		mul r8,r0,r6
+Line 80:		add r8,r8,r5
+Line 81:		mul r8,r8,4
+Line 82:		add r9,r2,r8
+Line 83:		ld r11,0[r9]
+Line 84:		mul r11,r10,r11
+Line 85:		add r7,r7,r11
+Line 86:		add r6,r6,1
+Line 87:		b .nested_nested_C		
+
+

@@ -1,0 +1,106 @@
+    .main:
+       mov r0,3   @N
+       mov r1,0x100    
+       mov r2,0x200    
+       mov r3,0x300
+       add r13,r0,1
+      
+    
+ .start:
+       mov r4,0  @i
+       mov r5,0  @j
+ .loop1:
+       cmp r4,r0
+       
+       
+       bgt .next
+       b .loop2
+ .loop3:
+        add r4,r4,1
+        cmp r4,r0
+        
+        bgt .next
+        mov r5,0
+        b .loop2
+ .loop2:
+       cmp r5,r0
+       
+       bgt .loop3
+       
+       mul r6,r4,r13  @3*i
+       add r6,r6,r5  @3*i+j
+       mul r6,r6,4    @(3*i+j)*4
+       add r6,r6,r1   @(3*i+j)*4+base address of A
+       add r7,r4,r5    @i+j
+       st r7,0[r6]
+       .print r7
+       mul r6,r4,r13  @3*i
+       add r6,r6,r5  @3*i+j
+       mul r6,r6,4    @(3*i+j)*4
+       add r6,r6,r2   @(3*i+j)*4+base address of B
+       mul r8,r4,2   @2*i
+       mul r9,r5,3   @3*j
+       add r10,r8,r9    @2i+3j
+       st r10,0[r6]   
+       .print r10
+       add r5,r5,1
+       b .loop2
+       
+.next: 
+       mov r4,0  @i
+       mov r5,0  @j
+       mov r6,0  @k
+ .loop4:
+       cmp r4,r0      
+
+       bgt .exit
+       b .loop5
+.loop5:
+       cmp r5,r0
+      
+       bgt .exit
+	mov r6,0
+       b .loop6
+.loop7:
+       mul r6,r4,r13  @3*i
+       add r6,r6,r5  @3*i+j
+       mul r6,r6,4   @(3*i+j)*4
+       add r6,r6,r3   @(3*i+j)*4+base address of C
+	.print r12
+       st r12,0[r6]
+
+        add r5,r5,1
+        cmp r5,r0
+	mov r12,0
+        bgt .loop8
+        mov r6,0
+        b .loop6
+.loop8:
+        add r4,r4,1
+        cmp r4,r0
+        
+        bgt .exit
+        mov r5,0
+        b .loop5
+.loop6:
+       cmp r6,r0
+       
+       bgt .loop7
+       mul r7,r4,r13  @3*i
+       add r7,r7,r6  @3*i+k
+       mul r7,r7,4    @(3*i+k)*4
+       add r7,r7,r1   @(3*i+k)*4+base address of A
+       ld r8,0[r7]
+
+       mul r9,r6,r13  @3*k
+       add r9,r9,r5  @3*k+j
+       mul r9,r9,4    @(3*k+j)*4
+       add r9,r9,r2   @(3*k+j)*4+base address of B 
+       ld r10,0[r9]
+ 
+       mul r11,r8,r10
+       add r12,r12,r11
+       add r6,r6,1
+       b .loop6
+.exit:
+

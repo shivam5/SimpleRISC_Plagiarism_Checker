@@ -1,0 +1,81 @@
+(6,18)
+test/assignment3/architec.txt
+test/assignment3/2015csb1024_Pratham_assign2.s
+Match - 13.9706%
+
+The matched blocks are :
+1st program : 
+Line 40:mov r0,0x100
+Line 41:mov r1,0x200
+Line 42:mov r4,0
+Line 43:mov r5,0
+Line 44:mov r6,0
+
+2nd program : 
+Line 7:mov r1,0x100
+Line 8:mov r2,0x200
+Line 9:mov r3,0x300
+Line 13:mov r4,-1
+
+
+The matched blocks are :
+1st program : 
+Line 46:mov r5,0
+Line 47:cmp r3,r4
+Line 48:beq .end
+
+2nd program : 
+Line 3:mov r0,2
+Line 4:cmp r0,0
+Line 5:beq .exit
+
+
+The matched blocks are :
+1st program : 
+Line 46:mov r5,0
+Line 47:cmp r3,r4
+Line 48:beq .end
+
+2nd program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+
+The matched blocks are :
+1st program : 
+Line 46:mov r5,0
+Line 47:cmp r3,r4
+Line 48:beq .end
+
+2nd program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+
+The matched blocks are :
+1st program : 
+Line 46:mov r5,0
+Line 47:cmp r3,r4
+Line 48:beq .end
+
+2nd program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 7:mov r1,0x100
+Line 8:mov r2,0x200
+Line 9:mov r3,0x300
+Line 13:mov r4,-1
+
+

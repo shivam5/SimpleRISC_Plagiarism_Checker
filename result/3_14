@@ -1,0 +1,39 @@
+(3,14)
+test/assignment3/Matrix_multiplication.s
+test/assignment3/matrix.txt.txt
+Match - 16.8675%
+
+The matched blocks are :
+1st program : 
+Line 73:MUL R5, R0, R1
+Line 74:ADD R5, R5, R8
+Line 75:MUL R5, R5, 4
+Line 76:ADD R5, R5, R3
+Line 78:LD R9, 0[R5]  //Loading A[i][k]
+Line 80:MUL R5, R0, R8
+Line 81:ADD R5, R5, R2
+Line 82:MUL R5, R5, 4
+Line 83:ADD R5, R5, R6
+Line 85:LD R10, 0[R5]  //Loading B[k][j]
+Line 87:MUL R9, R9, R10
+Line 88:ADD R4, R4, R9  //Adding to the sum.
+Line 90:ADD R8, R8, 1
+Line 91:B .inner_inner_loop_product_condition
+
+2nd program : 
+Line 72:			mul r6,r2,r5        // i*size of matrix
+Line 73:			add r6,r6,r4        // (i*N+k)   ,N is size of matrix
+Line 74:			mul r6,r6,4         //(i*N+k)*4
+Line 75:			add r6,r6,r8        //
+Line 76:			ld r0,0[r6]         //r0=A[i][k]
+Line 77:			mul r7,r4,r5        
+Line 78:			add r7,r7,r3
+Line 79:			mul r7,r7,4         //(k*n+j)*4
+Line 80:			add r7,r7,r9
+Line 81:			ld r1,0[r7]          //r1=B[k][j]
+Line 82:			mul r6,r1,r0        //product
+Line 83:			add r13,r13,r6
+Line 84:			add r4,r4,1
+Line 85:			b .loop7
+
+

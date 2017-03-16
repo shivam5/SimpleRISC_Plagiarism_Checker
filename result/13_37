@@ -1,0 +1,45 @@
+(13,37)
+test/assignment3/2015CSB1010.s
+test/assignment3/2015csb1117_matrix.asm
+Match - 16.9697%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,3			@ size of matrix
+Line 3:mov r1,0x100		@ addr of A[0][0]
+Line 4:mov r2,0x200		@ addr of B[0][0]
+Line 5:mov r3,0x300		@ addr of C[0][0]
+Line 6:mov r4,0			@ row iterator
+Line 7:mov r5,0			@ col iterator
+
+2nd program : 
+Line 1:mov r0,4       @ order of matrix 
+Line 2:mov r1,0x100 	@base address of first matrix
+Line 3:mov r2,0x200 	@	       second	
+Line 4:mov r3,0x300 	@ 	       third	
+Line 5:mov r4,-1	   	@ index for rows
+Line 6:mov r5,0     	@ index for columns		
+
+
+The matched blocks are :
+1st program : 
+Line 102:	mul r6,r4,r0
+Line 103:	add r6,r6,r5
+Line 104:	mul r6,r6,4
+Line 105:	add r6,r6,r3
+Line 106:	ld r7,[r6]
+Line 107:	.print r7			@ printing C[i][j]
+Line 108:	add r5,r5,1
+Line 109:	b .pt2
+
+2nd program : 
+Line 98:	mul r6,r0,r4
+Line 99:	add r6,r6,r5	
+Line 100:	mul r6,r6,4
+Line 101:	add r3,r3,r6 	@address 
+Line 102:	ld r7,[r3]
+Line 103:	.print r7
+Line 104:	add r5,r5,1
+Line 105:	b .finloopj
+
+

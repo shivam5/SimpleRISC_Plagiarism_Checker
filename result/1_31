@@ -1,0 +1,81 @@
+(1,31)
+test/assignment3/matrix1.s
+test/assignment3/matrix(1).s
+Match - 13.1737%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r13,3
+Line 3:mov r0,0
+Line 4:mov r3,0x100
+Line 5:mov r4,0x200
+Line 6:mov r5,0x300
+
+2nd program : 
+Line 7:    mov r1,0x100
+Line 8:    mov r2,0x200
+Line 9:    mov r3,0x300
+Line 10:    mov r4,0
+Line 11:    mov r5,0
+Line 12:    b .nested_assign_loop    
+
+
+The matched blocks are :
+1st program : 
+Line 2:mov r13,3
+Line 3:mov r0,0
+Line 4:mov r3,0x100
+Line 5:mov r4,0x200
+Line 6:mov r5,0x300
+
+2nd program : 
+Line 41:	mov r4,0
+Line 42:	mov r5,0
+Line 43:	mov r6,0
+Line 44:	mov r7,0
+Line 45:	b .nested_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 11:	mov r1,1
+Line 12:	add r0,r0,1        
+Line 13:	cmp r13,r0
+Line 14:	beq .loop2
+
+2nd program : 
+Line 15:        mov r5,0        
+Line 16:        add r4,r4,1        
+Line 17:        cmp r4,r0
+Line 18:        bgt .multiply
+
+
+The matched blocks are :
+1st program : 
+Line 11:	mov r1,1
+Line 12:	add r0,r0,1        
+Line 13:	cmp r13,r0
+Line 14:	beq .loop2
+
+2nd program : 
+Line 95:            mov r5,0            
+Line 96:            add r4,r4,1        
+Line 97:            cmp r4,r0
+Line 98:            bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 42:	mov r0,0
+Line 43:	mov r3,0x100
+Line 44:	mov r4,0x200
+Line 45:	mov r5,0x300
+
+2nd program : 
+Line 41:	mov r4,0
+Line 42:	mov r5,0
+Line 43:	mov r6,0
+Line 44:	mov r7,0
+Line 45:	b .nested_nested_C
+
+

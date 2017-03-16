@@ -1,0 +1,79 @@
+(17,26)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/HWStartwith0.s
+Match - 22.9412%
+
+The matched blocks are :
+1st program : 
+Line 2:       mov r0,3   @N
+Line 3:       mov r1,0x100    
+Line 4:       mov r2,0x200    
+Line 5:       mov r3,0x300
+Line 6:       add r13,r0,1
+
+2nd program : 
+Line 60:	mov r3,0x300
+Line 61:	mov r4,0		//new i
+Line 62:	mov r5,0		//new j
+Line 63:	mov r6,0		//new k
+Line 64:	b .ichoose
+
+
+The matched blocks are :
+1st program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+2nd program : 
+Line 32:	mov r3,0
+Line 33:	mov r4,0
+Line 34:	b .bfiller
+
+
+The matched blocks are :
+1st program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+2nd program : 
+Line 95:	mov r6,0
+Line 96:	mov r8,0
+Line 97:	b .kchoose
+
+
+The matched blocks are :
+1st program : 
+Line 89:       mul r7,r4,r13  @3*i
+Line 90:       add r7,r7,r6  @3*i+k
+Line 91:       mul r7,r7,4    @(3*i+k)*4
+Line 92:       add r7,r7,r1   @(3*i+k)*4+base address of A
+Line 93:       ld r8,0[r7]
+Line 95:       mul r9,r6,r13  @3*k
+Line 96:       add r9,r9,r5  @3*k+j
+Line 97:       mul r9,r9,4    @(3*k+j)*4
+Line 98:       add r9,r9,r2   @(3*k+j)*4+base address of B 
+Line 99:       ld r10,0[r9]
+Line 101:       mul r11,r8,r10
+Line 102:       add r12,r12,r11
+Line 103:       add r6,r6,1
+Line 104:       b .loop6
+
+2nd program : 
+Line 102:	mul r7,r4,r10
+Line 103:	add r7,r7,r6
+Line 104:	mul r7,r7,4
+Line 105:	add r7,r7,r1 
+Line 106:	ld r7,0[r7] // load A[i][k]
+Line 107:	mul r9,r6,r10
+Line 108:	add r9,r9,r5
+Line 109:	mul r9,r9,4
+Line 110:	add r9,r9,r2
+Line 111:	ld r9,0[r9] // load B[k][j]
+Line 112:	mul r7,r7,r9 
+Line 113:	add r8,r7,r8 // add n elements that we get as product
+Line 114:	add r6,r6,1
+Line 115:	b .kchoose
+
+

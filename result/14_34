@@ -1,0 +1,77 @@
+(14,34)
+test/assignment3/matrix.txt.txt
+test/assignment3/assignment3.s
+Match - 13.125%
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 76:   add r2,r2,1
+Line 77:   add r11,r11,4
+Line 78:  b .loopjc
+
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 82:add r13,r13,1
+Line 83:add r1,r1,r12
+Line 84:b .loopic
+
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 49:mov r1,0x100
+Line 50:mov r10,0x300
+Line 51:mov r13,0
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 76:   add r2,r2,1
+Line 77:   add r11,r11,4
+Line 78:  b .loopjc
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 82:add r13,r13,1
+Line 83:add r1,r1,r12
+Line 84:b .loopic
+
+
+The matched blocks are :
+1st program : 
+Line 97:			mov r3,0                
+Line 98:			add r2,r2,1            // i++
+Line 99:			b .loop5               // going to loop 5
+
+2nd program : 
+Line 76:   add r2,r2,1
+Line 77:   add r11,r11,4
+Line 78:  b .loopjc
+
+

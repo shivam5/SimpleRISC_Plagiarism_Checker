@@ -1,0 +1,39 @@
+(3,26)
+test/assignment3/Matrix_multiplication.s
+test/assignment3/HWStartwith0.s
+Match - 15.5556%
+
+The matched blocks are :
+1st program : 
+Line 73:MUL R5, R0, R1
+Line 74:ADD R5, R5, R8
+Line 75:MUL R5, R5, 4
+Line 76:ADD R5, R5, R3
+Line 78:LD R9, 0[R5]  //Loading A[i][k]
+Line 80:MUL R5, R0, R8
+Line 81:ADD R5, R5, R2
+Line 82:MUL R5, R5, 4
+Line 83:ADD R5, R5, R6
+Line 85:LD R10, 0[R5]  //Loading B[k][j]
+Line 87:MUL R9, R9, R10
+Line 88:ADD R4, R4, R9  //Adding to the sum.
+Line 90:ADD R8, R8, 1
+Line 91:B .inner_inner_loop_product_condition
+
+2nd program : 
+Line 102:	mul r7,r4,r10
+Line 103:	add r7,r7,r6
+Line 104:	mul r7,r7,4
+Line 105:	add r7,r7,r1 
+Line 106:	ld r7,0[r7] // load A[i][k]
+Line 107:	mul r9,r6,r10
+Line 108:	add r9,r9,r5
+Line 109:	mul r9,r9,4
+Line 110:	add r9,r9,r2
+Line 111:	ld r9,0[r9] // load B[k][j]
+Line 112:	mul r7,r7,r9 
+Line 113:	add r8,r7,r8 // add n elements that we get as product
+Line 114:	add r6,r6,1
+Line 115:	b .kchoose
+
+

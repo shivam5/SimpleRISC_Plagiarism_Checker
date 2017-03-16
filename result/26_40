@@ -1,0 +1,39 @@
+(26,40)
+test/assignment3/HWStartwith0.s
+test/assignment3/ranjan.s
+Match - 18.1818%
+
+The matched blocks are :
+1st program : 
+Line 102:	mul r7,r4,r10
+Line 103:	add r7,r7,r6
+Line 104:	mul r7,r7,4
+Line 105:	add r7,r7,r1 
+Line 106:	ld r7,0[r7] // load A[i][k]
+Line 107:	mul r9,r6,r10
+Line 108:	add r9,r9,r5
+Line 109:	mul r9,r9,4
+Line 110:	add r9,r9,r2
+Line 111:	ld r9,0[r9] // load B[k][j]
+Line 112:	mul r7,r7,r9 
+Line 113:	add r8,r7,r8 // add n elements that we get as product
+Line 114:	add r6,r6,1
+Line 115:	b .kchoose
+
+2nd program : 
+Line 40:	mul r7,r4,r0
+Line 41:	add r7,r7,r6
+Line 42:	mul r7,r7,4    @calculating index for A[i][r6]
+Line 43:	add r10,r7,r1
+Line 44:	ld r8,[r10]  @load it from memory in r8
+Line 45:	mul r7,r6,r0
+Line 46:	add r7,r7,r5
+Line 47:	mul r7,r7,4    @calculating index for B[r6][j]
+Line 48:	add r10,r7,r2
+Line 49:	ld r9,0[r10]    @load it from memory in r9
+Line 50:	mul r8,r8,r9
+Line 51:	add r11,r11,r8   @sum
+Line 52:	add r6,r6,1   @increasing index for multiply
+Line 53:	b .loop5
+
+

@@ -1,0 +1,97 @@
+(19,32)
+test/assignment3/multiply.s
+test/assignment3/mine.s
+Match - 23.1343%
+
+The matched blocks are :
+1st program : 
+Line 1:mov r3 0           @ i
+Line 2:mov r4 0           @ j
+Line 3:mov r0 5           @ n
+Line 4:mov r8 0x100       @ A
+Line 5:mov r9 0x200       @ B
+Line 6:mov r10 0x300      @ C
+Line 7:b .loop
+
+2nd program : 
+Line 1:mov r0 3                              @ initial n value
+Line 2:mov r1 0x100                           @ A address 
+Line 3:mov r2 0x200                           @ B address
+Line 4:mov r3 0x300                           @ C address
+Line 5:mov r8 r1    
+Line 6:mov r9 r2
+Line 7:mov r4 0                               @ i 
+
+
+The matched blocks are :
+1st program : 
+Line 28:add r2 r3 1        @ check if n>i+1        
+Line 29:cmp r0 r2
+Line 30:bgt .increase_i    
+
+2nd program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 28:add r2 r3 1        @ check if n>i+1        
+Line 29:cmp r0 r2
+Line 30:bgt .increase_i    
+
+2nd program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+
+The matched blocks are :
+1st program : 
+Line 33:add r3 r3 1        @ i=i+1
+Line 34:mov r4 0           @ j again set to 0
+Line 35:b .loop
+
+2nd program : 
+Line 46: mov r6 0                             @ k counter
+Line 47:mov r7 0                                      @ sum
+Line 48:b .loop6
+
+
+The matched blocks are :
+1st program : 
+Line 77:add r4 r4 1        @ j=j+1
+Line 78:mov r7 0           @ k= 0
+Line 79:b .assign_C        @ follow loop
+
+2nd program : 
+Line 46: mov r6 0                             @ k counter
+Line 47:mov r7 0                                      @ sum
+Line 48:b .loop6
+
+
+The matched blocks are :
+1st program : 
+Line 81:add r6 r3 1       
+Line 82:cmp r0 r6
+Line 83:beq .exi
+
+2nd program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 81:add r6 r3 1       
+Line 82:cmp r0 r6
+Line 83:beq .exi
+
+2nd program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+

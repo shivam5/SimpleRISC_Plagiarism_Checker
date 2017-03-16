@@ -1,0 +1,80 @@
+(14,24)
+test/assignment3/matrix.txt.txt
+test/assignment3/NIKHIL_N_2015csb1020.s
+Match - 26.087%
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 45:  mov r7,0
+Line 46:  mov r8,0
+Line 47:   mov r5,0
+
+
+The matched blocks are :
+1st program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+2nd program : 
+Line 2:  mov r2,0x100
+Line 3:  mov r1,0x200
+Line 4:  mov r3,0x300
+Line 5:  mov r7,0
+Line 6:  mov r8,0
+Line 7:  mov r0,4
+
+
+The matched blocks are :
+1st program : 
+Line 72:			mul r6,r2,r5        // i*size of matrix
+Line 73:			add r6,r6,r4        // (i*N+k)   ,N is size of matrix
+Line 74:			mul r6,r6,4         //(i*N+k)*4
+Line 75:			add r6,r6,r8        //
+Line 76:			ld r0,0[r6]         //r0=A[i][k]
+Line 77:			mul r7,r4,r5        
+Line 78:			add r7,r7,r3
+Line 79:			mul r7,r7,4         //(k*n+j)*4
+Line 80:			add r7,r7,r9
+Line 81:			ld r1,0[r7]          //r1=B[k][j]
+Line 82:			mul r6,r1,r0        //product
+Line 83:			add r13,r13,r6
+Line 84:			add r4,r4,1
+Line 85:			b .loop7
+
+2nd program : 
+Line 68:     mul r9,r7,r0
+Line 69:     add r9,r9,r5
+Line 70:     mul r9,r9,4
+Line 71:     add r9,r9,r2
+Line 72:     ld  r12,[r9]
+Line 73:     mul r9,r5,r0
+Line 74:     add r9,r9,r8
+Line 78:     mul r9,r9,4
+Line 79:     add r9,r9,r1
+Line 80:     ld  r13,[r9]
+Line 81:     mul r13,r12,r13
+Line 82:    add r4,r4,r13
+Line 83:   add r5,r5,1
+Line 84:   b .lloop3
+
+
+The matched blocks are :
+1st program : 
+Line 97:			mov r3,0                
+Line 98:			add r2,r2,1            // i++
+Line 99:			b .loop5               // going to loop 5
+
+2nd program : 
+Line 86:     st r4,[r11]
+Line 87:    add r8,r8,1
+Line 88:     b .lloop2
+
+

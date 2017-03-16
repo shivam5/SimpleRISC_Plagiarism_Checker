@@ -1,0 +1,49 @@
+(4,14)
+test/assignment3/archi_assign3.asm
+test/assignment3/matrix.txt.txt
+Match - 13.9073%
+
+The matched blocks are :
+1st program : 
+Line 4:	mov r1,0x100
+Line 5:	mov r2,0x200
+Line 6:	mov r3,0x300
+Line 7:	mov r4,-1       	/*r4 is i*/
+Line 8:	mov r5,0		/*r5 is j*/
+
+2nd program : 
+Line 2:	mov r8,0x100     //base index of matrix A
+Line 3:	mov r2,0  //index i
+Line 4:	mov r3,0  //index j
+Line 5:	mov r5,3	//size of matrix
+Line 6:	sub r12,r5,1 //size of matrix -1
+
+
+The matched blocks are :
+1st program : 
+Line 4:	mov r1,0x100
+Line 5:	mov r2,0x200
+Line 6:	mov r3,0x300
+Line 7:	mov r4,-1       	/*r4 is i*/
+Line 8:	mov r5,0		/*r5 is j*/
+
+2nd program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+
+The matched blocks are :
+1st program : 
+Line 33:	mov r4,-1
+Line 34:	mov r5,0
+Line 35:	mov r6,0				/* r6 is k */
+
+2nd program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+

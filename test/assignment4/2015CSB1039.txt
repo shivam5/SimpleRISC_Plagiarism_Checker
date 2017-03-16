@@ -1,0 +1,109 @@
+.main:
+mov r0,5
+mov r1,10    @a
+mov r2,12    @b
+mov r3,-1    @c
+call .f
+mov r4,r11
+.print r4
+b .exit          
+
+.f:
+sub sp,sp,16      @creating stack space for f
+st r1,0[sp]       @ stores a
+st r2,4[sp]
+st r3,8[sp]
+st ra,12[sp]
+mov r5,0         @i
+.loopi:
+add r1,r2,r3
+sub r2,r1,r3
+call .g                  @call g(r1,r2,r3)
+add r3,r3,r12
+add r5,r5,1
+cmp r0,r5
+bgt .loopi
+add r11,r1,r2     @r11 is return variable of f              
+add r11,r11,r3
+        
+ld r1,0[sp]    @loading a,b,c,ra from stack     
+ld r2,4[sp]
+ld r3,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.g:
+sub sp,sp,16
+st r1,0[sp]
+st r2,4[sp]
+st r3,8[sp]
+st ra,12[sp]
+mov r4,0
+call .h               @calls h(a,b,c,0)
+mov r1,r13
+       
+mov r4,1
+        
+call .h          @calls h(a,b,c,1)
+mov r2,r13
+mov r4,2
+call .h          @calls h(a,b,c,2)
+mov r3,r13
+
+add r12,r1,r2       @r12 is return variable of f
+add r12,r12,r3
+
+ld r1,0[sp]
+ld r2,4[sp]
+ld r3,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.h:
+sub sp,sp,20
+st r1,0[sp]
+st r2,4[sp]
+st r3,8[sp]
+st r4,12[sp]
+st ra,16[sp]
+cmp r4,0
+beq .casez
+      
+cmp r4,1
+beq .caseo
+cmp r4,2
+beq .caset
+b .else
+
+.casez:
+        
+add r13,r1,r2        @r13 is return variable of f
+sub r13,r13,r3
+b .cont
+
+.caseo:
+sub r13,r1,r2
+add r13,r13,r3
+b .cont
+
+.caset:
+add r13,r1,r2
+add r13,r13,r3
+b .cont
+
+.else:
+mov r13,0
+
+.cont:
+ld r1,0[sp]
+ld r2,4[sp]
+ld r3,8[sp]
+ld r4,12[sp]
+ld ra,16[sp]
+add sp,sp,20
+ret
+
+.exit:
+

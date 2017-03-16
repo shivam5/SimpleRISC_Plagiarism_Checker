@@ -1,0 +1,85 @@
+.main:
+mov r0, 0x100
+mov r1, 0x200
+mov r2, 0x300
+mov r3, 3
+mov r4, 0
+mov r5, 0
+mov r6, 0
+mov r7, 0
+mov r8, 0
+mov r11,0
+.loop1:
+cmp r3,r4
+bgt .loop2
+b .exit
+.loop2:
+cmp r3,r5
+bgt .dog1
+b .last
+.dog1:
+add r6,r4,r5
+mul r13,r4,2
+mul r12,r5,3
+add r13,r13,r12
+st r13,[r1]
+st r6,[r0]
+add r0,r0,4
+add r1,r1,4
+add r5,r5,1
+b .loop2
+.last:
+mov r5,0
+add r4,r4,1
+b .loop1
+
+
+
+ 
+.exit:
+mov r0,0x100
+mov r1,0x200
+mov r4,0
+mov r5,0
+mov r6,0
+.mul1:
+mov r5,0
+cmp r3,r4
+beq .end
+.mul2:
+cmp r3,r5
+add r4,r4,1
+beq .mul1
+sub r4,r4,1
+mov r7,0
+.mul3:
+cmp r3,r6
+add r5,r5,1
+beq .mulfinal
+sub r5,r5,1
+mul r8,r4,r3
+add r8,r8,r6
+mul r8,r8,4
+add r10,r0,r8
+mul r8,r6,r3
+add r8,r8,r5
+mul r8,r8,4
+add r11,r1,r8
+add r11,r1,r8
+ld r12,[r10]
+ld r13,[r11]
+
+mul r13,r13,r12
+add r7,r7,r13
+
+add r6,r6,1
+b .mul3
+.mulfinal:
+st r7,[r2]
+add r2,r2,4
+mov r6,0
+b .mul2
+.end:
+mov r0,0x100
+mov r1,0x200
+mov r2,0x300

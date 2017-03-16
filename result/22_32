@@ -1,0 +1,53 @@
+(22,32)
+test/assignment3/array.txt
+test/assignment3/mine.s
+Match - 10.084%
+
+The matched blocks are :
+1st program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+2nd program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+2nd program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+
+The matched blocks are :
+1st program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+2nd program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+2nd program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+

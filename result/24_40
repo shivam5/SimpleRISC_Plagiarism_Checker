@@ -1,0 +1,39 @@
+(24,40)
+test/assignment3/NIKHIL_N_2015csb1020.s
+test/assignment3/ranjan.s
+Match - 19.3103%
+
+The matched blocks are :
+1st program : 
+Line 68:     mul r9,r7,r0
+Line 69:     add r9,r9,r5
+Line 70:     mul r9,r9,4
+Line 71:     add r9,r9,r2
+Line 72:     ld  r12,[r9]
+Line 73:     mul r9,r5,r0
+Line 74:     add r9,r9,r8
+Line 78:     mul r9,r9,4
+Line 79:     add r9,r9,r1
+Line 80:     ld  r13,[r9]
+Line 81:     mul r13,r12,r13
+Line 82:    add r4,r4,r13
+Line 83:   add r5,r5,1
+Line 84:   b .lloop3
+
+2nd program : 
+Line 40:	mul r7,r4,r0
+Line 41:	add r7,r7,r6
+Line 42:	mul r7,r7,4    @calculating index for A[i][r6]
+Line 43:	add r10,r7,r1
+Line 44:	ld r8,[r10]  @load it from memory in r8
+Line 45:	mul r7,r6,r0
+Line 46:	add r7,r7,r5
+Line 47:	mul r7,r7,4    @calculating index for B[r6][j]
+Line 48:	add r10,r7,r2
+Line 49:	ld r9,0[r10]    @load it from memory in r9
+Line 50:	mul r8,r8,r9
+Line 51:	add r11,r11,r8   @sum
+Line 52:	add r6,r6,1   @increasing index for multiply
+Line 53:	b .loop5
+
+

@@ -1,0 +1,45 @@
+(25,26)
+test/assignment3/matrix.asm
+test/assignment3/HWStartwith0.s
+Match - 11.1842%
+
+The matched blocks are :
+1st program : 
+Line 15:	mov r0, 8			@N=5
+Line 16:	mul r11, r0, 4		@r11<-4N
+Line 17:	mov r1, 0			@i=0
+Line 18:	mov r2, 0			@i1=0
+Line 19:	b .loopi	
+
+2nd program : 
+Line 60:	mov r3,0x300
+Line 61:	mov r4,0		//new i
+Line 62:	mov r5,0		//new j
+Line 63:	mov r6,0		//new k
+Line 64:	b .ichoose
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 32:	mov r3,0
+Line 33:	mov r4,0
+Line 34:	b .bfiller
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 95:	mov r6,0
+Line 96:	mov r8,0
+Line 97:	b .kchoose
+
+

@@ -1,0 +1,56 @@
+   .main:
+mov r0,10
+mov r1,12
+mov r2,-1
+call .f
+.print r3
+b .exit
+
+
+.f:
+sub sp,sp,4
+st ra,0[sp]
+mov r3,r0
+mov r4,r1
+mov r5,r2
+mov r10,0
+b .loop1
+
+
+
+
+.loop1:
+cmp r10,5
+beq .return
+add r3,r4,r5
+sub r4,r3,r5
+call .g
+add r5,r5,r6
+add r10,r10,1
+b .loop1
+
+.return:
+add r3,r3,r4
+add r3,r3,r5
+ld ra,0[sp]
+add sp,sp,4
+ret
+
+
+
+.g:
+add r6,r3,r4
+sub r6,r6,r5
+
+sub r7,r6,r4
+add r7,r7,r5
+
+add r8,r6,r7
+add r8,r8,r5
+
+add r6,r6,r7
+add r6,r6,r8
+
+ret
+
+.exit:

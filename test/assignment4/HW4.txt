@@ -1,0 +1,50 @@
+.main:
+	mov r1,10	//a
+	mov r2,12	//b
+	mov r3,-1	//c
+	mov r13,0 	//i = 0
+	b .f
+
+.f:
+	cmp r13,4
+	bgt .retf
+	add r1,r2,r3      //a = b+c
+	.print r1
+	sub r2,r1,r3  //b = a-c
+	.print r2
+	mov r6,r1 	   // copy of a
+	mov r7,r2	   //copy of b
+	mov r8,r3    //copy of c
+	call .g
+	add r3,r3,r9	//c = c + g(a,b,c)
+	.print r3
+	add r13,r13,1	//i++
+	b .f
+
+.retf:
+	add r0,r1,r2	//add d = a+b
+	add r0,r0,r3    //d = a + b+c
+	.print r0
+	b .exit
+
+.g:
+	b .h0	// h0 returns r6 which is copy of a and stored in this a
+	
+.h0:
+	add r6,r6,r7	//a = a+b
+	sub r6,r6,r8	//a = a+b-c
+	b .h1
+
+.h1:
+	sub r7,r6,r7	//b = a-b
+	add r7,r7,r8	//b = a-b+c
+	b .h2
+
+.h2:
+	add r8,r8,r6	//c = c+a
+	add r8,r8,r7	//c = c+b
+	add r9,r6,r7	//return value = r9
+	add r9,r9,r8	//r9 = a+b+c
+	ret
+
+.exit:

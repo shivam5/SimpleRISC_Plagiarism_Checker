@@ -1,0 +1,57 @@
+(21,24)
+test/assignment3/ArchiCode3.s
+test/assignment3/NIKHIL_N_2015csb1020.s
+Match - 24.3902%
+
+The matched blocks are :
+1st program : 
+Line 2:         mov r0,3                   
+Line 3:         mov r2,0x100                       //defining initial memory adresses
+Line 4:         mov r3,0x200
+Line 5:         mov r4,0x300
+Line 6:         mov r5,0                           //i
+Line 7:         mov r10,0
+
+2nd program : 
+Line 2:  mov r2,0x100
+Line 3:  mov r1,0x200
+Line 4:  mov r3,0x300
+Line 5:  mov r7,0
+Line 6:  mov r8,0
+Line 7:  mov r0,4
+
+
+The matched blocks are :
+1st program : 
+Line 59:                   mul r9,r0,r5
+Line 60:                   add r9,r9,r8
+Line 61:                   mul r9,r9,4
+Line 62:                   add r9,r9,r2                 //a ready
+Line 64:                   ld r10,[r9]                  //a ready
+Line 66:                   mul r11,r8,r0
+Line 67:                   add r11,r11,r7
+Line 68:                   mul r11,r11,4
+Line 69:                   add r11,r11,r3                //b ready
+Line 71:                   ld r12,[r11]                  //b ready
+Line 73:                   mul r13,r10,r12
+Line 74:                   add r14,r14,r13               //r14 final useful value to be stored
+Line 76:                   add r8,r8,1
+Line 77:             b .l3
+
+2nd program : 
+Line 68:     mul r9,r7,r0
+Line 69:     add r9,r9,r5
+Line 70:     mul r9,r9,4
+Line 71:     add r9,r9,r2
+Line 72:     ld  r12,[r9]
+Line 73:     mul r9,r5,r0
+Line 74:     add r9,r9,r8
+Line 78:     mul r9,r9,4
+Line 79:     add r9,r9,r1
+Line 80:     ld  r13,[r9]
+Line 81:     mul r13,r12,r13
+Line 82:    add r4,r4,r13
+Line 83:   add r5,r5,1
+Line 84:   b .lloop3
+
+

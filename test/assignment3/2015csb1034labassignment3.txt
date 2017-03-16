@@ -1,0 +1,70 @@
+ .main:
+mov r0,2     @N
+mov r1,0x100 @A
+mov r2,0x200 @B
+mov r12,0x300
+
+@ r3 for i
+@ r4 for j
+
+mov r10,1
+mov r5,0
+.loop_1:
+mov r4,0
+.loop_2:
+mov r6,2
+add r6,r6,r3
+add r6,r6,r4
+add r7,r5,r1
+st r6,0[r7]
+
+mov r6,5
+add r6,r6,r3
+add r6,r6,r3
+add r6,r6,r4
+add r6,r6,r4
+add r6,r6,r4
+add r7,r5,r2
+st r6,0[r7]
+
+add r4,r4,1
+add r5,r5,4
+cmp r0,r4
+bgt .loop_2
+
+add r3,r3,1
+cmp r0,r3
+bgt .loop_1
+mov r3,0
+mov r4,0
+mov r5,0
+.loop_3:
+mov r4,0
+.loop_4:
+mov r5,0
+mov r10,0
+.loop_5:
+mul r6,r0,r3
+add r6,r6,r5
+mul r6,r6,4
+add r6,r6,r1
+ld r7,0[r6]
+mul r8,r0,r3
+add r8,r8,r5
+mul r8,r8,4
+add r8,r8,r2
+ld r9,0[r8]
+mul r11,r9,r7
+add r10,r10,r11
+st r10,0[r12]
+
+add r5,r5,1
+cmp r0,r5
+bgt .loop_5
+add r12,r12,4
+add r4,r4,1
+cmp r0,r4
+bgt .loop_4
+add r3,r3,1
+cmp r0,r3
+bgt .loop_3

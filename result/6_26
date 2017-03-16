@@ -1,0 +1,81 @@
+(6,26)
+test/assignment3/architec.txt
+test/assignment3/HWStartwith0.s
+Match - 12.5%
+
+The matched blocks are :
+1st program : 
+Line 32:mov r5,0
+Line 33:add r4,r4,1
+Line 34:b .loop1
+
+2nd program : 
+Line 32:	mov r3,0
+Line 33:	mov r4,0
+Line 34:	b .bfiller
+
+
+The matched blocks are :
+1st program : 
+Line 32:mov r5,0
+Line 33:add r4,r4,1
+Line 34:b .loop1
+
+2nd program : 
+Line 69:	call .jcaller	//go to j loop
+Line 70:	add r4,r4,1
+Line 71:	b .ichoose
+
+
+The matched blocks are :
+1st program : 
+Line 32:mov r5,0
+Line 33:add r4,r4,1
+Line 34:b .loop1
+
+2nd program : 
+Line 95:	mov r6,0
+Line 96:	mov r8,0
+Line 97:	b .kchoose
+
+
+The matched blocks are :
+1st program : 
+Line 40:mov r0,0x100
+Line 41:mov r1,0x200
+Line 42:mov r4,0
+Line 43:mov r5,0
+Line 44:mov r6,0
+
+2nd program : 
+Line 60:	mov r3,0x300
+Line 61:	mov r4,0		//new i
+Line 62:	mov r5,0		//new j
+Line 63:	mov r6,0		//new k
+Line 64:	b .ichoose
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 32:	mov r3,0
+Line 33:	mov r4,0
+Line 34:	b .bfiller
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 95:	mov r6,0
+Line 96:	mov r8,0
+Line 97:	b .kchoose
+
+

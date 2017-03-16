@@ -1,0 +1,39 @@
+(5,40)
+test/assignment3/MatrixMultiplication.s
+test/assignment3/ranjan.s
+Match - 10.4478%
+
+The matched blocks are :
+1st program : 
+Line 69:mul r9,r4,r0
+Line 70:add r9,r9,r6
+Line 71:mul r9,r9,4     //[i][k]  address
+Line 72:add r9,r9,r1  
+Line 74:ld r10,[r9]      //  retrieving A[i][k] address value
+Line 76:mul r11,r6,r0
+Line 77:add r11,r11,r5
+Line 78:mul r11,r11,4
+Line 79:add r11,r11,r2
+Line 81:ld r12,[r11]      //b[k][j]
+Line 83:mul r10,r10,r12   //a[i][k]*b[k][j]
+Line 85:add r13,r13,r10
+Line 86:st r13,[r8]     // storing the value i.e C[i][j] in memory
+Line 88:b .loop3
+
+2nd program : 
+Line 40:	mul r7,r4,r0
+Line 41:	add r7,r7,r6
+Line 42:	mul r7,r7,4    @calculating index for A[i][r6]
+Line 43:	add r10,r7,r1
+Line 44:	ld r8,[r10]  @load it from memory in r8
+Line 45:	mul r7,r6,r0
+Line 46:	add r7,r7,r5
+Line 47:	mul r7,r7,4    @calculating index for B[r6][j]
+Line 48:	add r10,r7,r2
+Line 49:	ld r9,0[r10]    @load it from memory in r9
+Line 50:	mul r8,r8,r9
+Line 51:	add r11,r11,r8   @sum
+Line 52:	add r6,r6,1   @increasing index for multiply
+Line 53:	b .loop5
+
+

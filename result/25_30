@@ -1,0 +1,104 @@
+(25,30)
+test/assignment3/matrix.asm
+test/assignment3/csl211_3_edited.s
+Match - 15.9236%
+
+The matched blocks are :
+1st program : 
+Line 42:	mov r1, 0			@i=0
+Line 43:	mov r2, 0			@i1=0
+Line 44:	mov r10, 0			@i3=0
+Line 45:	b .loopi2
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 42:	mov r1, 0			@i=0
+Line 43:	mov r2, 0			@i1=0
+Line 44:	mov r10, 0			@i3=0
+Line 45:	b .loopi2
+
+2nd program : 
+Line 61:    mov r4,0
+Line 62:    mov r5,0
+Line 63:    mov r6,0
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 7:    mov r4,0           //i index
+Line 8:    mov r5,0          //j index
+Line 9:    sub r8,r0,1
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 29:      add r4,r4,1
+Line 30:      mov r5,0 
+Line 31:      b .outer_loop
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 57:     add r4,r4,1
+Line 58:     mov r5,0
+Line 59:     b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 61:    mov r4,0
+Line 62:    mov r5,0
+Line 63:    mov r6,0
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 100:    add r4,r4,1
+Line 101:    mov r5,0 
+Line 102:    b .floop1   
+
+
+The matched blocks are :
+1st program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+2nd program : 
+Line 123:    add r4,r4,1
+Line 124:    mov r5,0
+Line 125:    b .finalloop1
+
+

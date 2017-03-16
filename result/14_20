@@ -1,0 +1,95 @@
+(14,20)
+test/assignment3/matrix.txt.txt
+test/assignment3/assigment3.txt
+Match - 24.2038%
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 49:mov r4,1
+Line 50:mov r5,1
+Line 51:mov r6,1
+Line 52:b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+2nd program : 
+Line 2:mov r0,3
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r3,0x300
+Line 6:mov r4,1
+Line 7:mov r5,1
+
+
+The matched blocks are :
+1st program : 
+Line 66:		cmp r3,r12         //j<=n-1
+Line 67:		mov r13,0           //assigning r13=0 
+Line 68:		bgt .break6
+
+2nd program : 
+Line 60:cmp r5,r0
+Line 61:mov r11,0
+Line 62:bgt .icr
+
+

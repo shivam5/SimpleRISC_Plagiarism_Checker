@@ -1,0 +1,61 @@
+(3,40)
+test/assignment3/Matrix_multiplication.s
+test/assignment3/ranjan.s
+Match - 24%
+
+The matched blocks are :
+1st program : 
+Line 73:MUL R5, R0, R1
+Line 74:ADD R5, R5, R8
+Line 75:MUL R5, R5, 4
+Line 76:ADD R5, R5, R3
+Line 78:LD R9, 0[R5]  //Loading A[i][k]
+Line 80:MUL R5, R0, R8
+Line 81:ADD R5, R5, R2
+Line 82:MUL R5, R5, 4
+Line 83:ADD R5, R5, R6
+Line 85:LD R10, 0[R5]  //Loading B[k][j]
+Line 87:MUL R9, R9, R10
+Line 88:ADD R4, R4, R9  //Adding to the sum.
+Line 90:ADD R8, R8, 1
+Line 91:B .inner_inner_loop_product_condition
+
+2nd program : 
+Line 40:	mul r7,r4,r0
+Line 41:	add r7,r7,r6
+Line 42:	mul r7,r7,4    @calculating index for A[i][r6]
+Line 43:	add r10,r7,r1
+Line 44:	ld r8,[r10]  @load it from memory in r8
+Line 45:	mul r7,r6,r0
+Line 46:	add r7,r7,r5
+Line 47:	mul r7,r7,4    @calculating index for B[r6][j]
+Line 48:	add r10,r7,r2
+Line 49:	ld r9,0[r10]    @load it from memory in r9
+Line 50:	mul r8,r8,r9
+Line 51:	add r11,r11,r8   @sum
+Line 52:	add r6,r6,1   @increasing index for multiply
+Line 53:	b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 125:MUL R5, R0, R1
+Line 126:ADD R5, R5, R2
+Line 127:MUL R5, R5, 4
+Line 128:ADD R5, R5, R7
+Line 130:LD R4, 0[R5]
+Line 132:.print R4
+Line 134:ADD R2, R2, 1
+Line 135:B .inner_loop_print_condition
+
+2nd program : 
+Line 55:	mul r7,r0,r4
+Line 56:	add r7,r7,r5
+Line 57:	mul r7,r7,4   @calculating index of C[i][j]
+Line 58:	add r8,r7,r3
+Line 59:	st r11,[r8]   @storing it to memory
+Line 60:	.print r11
+Line 61:	add r5,r5,1    @increasing j
+Line 62:	b .loop3   @comparing i to N if it is equal return to main
+
+

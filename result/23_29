@@ -1,0 +1,45 @@
+(23,29)
+test/assignment3/matrix_multiply.asm
+test/assignment3/Uneet_2015csb1038Ass3.s.s
+Match - 13.5135%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,2                          @ giving the value of n
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r3,0x300
+Line 6:mov r4,0
+Line 7:mov r5,0
+
+2nd program : 
+Line 66:	mov r5,0                   //set all the indexes to zero
+Line 67:	mov r6,0
+Line 68:	mov r7,0
+Line 69:	mov r8,0
+Line 70:	mov r10,0
+Line 71:	mov r11,0
+
+
+The matched blocks are :
+1st program : 
+Line 92:mul r12,r4,r0
+Line 93:add r12,r12,r5
+Line 94:mul r12,r12,4
+Line 95:add r12,r12,r3
+Line 96:.print r7
+Line 97:st r7,[r12]                                  @ storing final matrix C
+Line 99:add r5,r5,1
+Line 100:b .l2
+
+2nd program : 
+Line 20:	mul r7,r0,r5               
+Line 21:	add r7,r7,r6
+Line 22:	mul r7,r7,4
+Line 23:	add r7,r1,r7               //r1+4(N.i+j)
+Line 24:	add r8,r5,r6               
+Line 25:	st r8,[r7]
+Line 26:	add r6,r6,1                //j=j+1
+Line 27:	b .loop2r1
+
+

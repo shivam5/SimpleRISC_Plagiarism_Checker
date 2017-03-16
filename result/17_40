@@ -1,0 +1,39 @@
+(17,40)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/ranjan.s
+Match - 20%
+
+The matched blocks are :
+1st program : 
+Line 89:       mul r7,r4,r13  @3*i
+Line 90:       add r7,r7,r6  @3*i+k
+Line 91:       mul r7,r7,4    @(3*i+k)*4
+Line 92:       add r7,r7,r1   @(3*i+k)*4+base address of A
+Line 93:       ld r8,0[r7]
+Line 95:       mul r9,r6,r13  @3*k
+Line 96:       add r9,r9,r5  @3*k+j
+Line 97:       mul r9,r9,4    @(3*k+j)*4
+Line 98:       add r9,r9,r2   @(3*k+j)*4+base address of B 
+Line 99:       ld r10,0[r9]
+Line 101:       mul r11,r8,r10
+Line 102:       add r12,r12,r11
+Line 103:       add r6,r6,1
+Line 104:       b .loop6
+
+2nd program : 
+Line 40:	mul r7,r4,r0
+Line 41:	add r7,r7,r6
+Line 42:	mul r7,r7,4    @calculating index for A[i][r6]
+Line 43:	add r10,r7,r1
+Line 44:	ld r8,[r10]  @load it from memory in r8
+Line 45:	mul r7,r6,r0
+Line 46:	add r7,r7,r5
+Line 47:	mul r7,r7,4    @calculating index for B[r6][j]
+Line 48:	add r10,r7,r2
+Line 49:	ld r9,0[r10]    @load it from memory in r9
+Line 50:	mul r8,r8,r9
+Line 51:	add r11,r11,r8   @sum
+Line 52:	add r6,r6,1   @increasing index for multiply
+Line 53:	b .loop5
+
+

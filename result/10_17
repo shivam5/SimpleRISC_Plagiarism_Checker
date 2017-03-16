@@ -1,0 +1,53 @@
+(10,17)
+test/assignment3/2015CSB1039.txt
+test/assignment3/FinalCompltedHOMEWORK3.txt
+Match - 15.4839%
+
+The matched blocks are :
+1st program : 
+Line 22:add r4,r4,1
+Line 23:cmp r0,r4
+Line 24:bgt .loopi
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 22:add r4,r4,1
+Line 23:cmp r0,r4
+Line 24:bgt .loopi
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 40:add r4,r4,1
+Line 41:cmp r0,r4
+Line 42:bgt .loopk
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 40:add r4,r4,1
+Line 41:cmp r0,r4
+Line 42:bgt .loopk
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+

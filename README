@@ -1,0 +1,102 @@
+================================================
+This is a plagiarism checker written for SimpleRISC assembly language
+================================================
+
+Project guided by Dr. Neeeraj Goel.
+================================================
+
+Author
+==============
+Shivam Mittal
+2nd year B.Tech Computer Science Engineering, IIT Ropar
+Email - 2015csb1032@iitrpr.ac.in
+Github profile - github.com/shivam5
+
+Date : 20th December 2016
+
+
+Build
+=====
+
+Use Makefile
+
+
+
+Run
+===
+
+./bin/plagcheck <folder in which the files needs to be checked>
+
+Note : The result folder should be cleared before running the program, as all the outputs would be written there.
+
+
+
+
+Output
+======
+
+The main output is displayed in the terminal and also written in results/results.
+
+All the file in the folder which is specified are given number, (0 to n).
+The first file is 0 and so on.
+
+If the percentage match > allowed percentage, then its result is displayed.
+The format of the output is:
+
+(i,j)
+Path of the ith program
+Path of the jth program
+Match - Match percentage
+
+Example : 
+(1,6)
+test/assignment3/matrix1.s
+test/assignment3/architec.txt
+Match - 12.0567%
+
+Next, the details of the matched blocks between program i and program j can be found in result/i_j
+Example, for (1,6), the details would be in file 1_6
+
+In that file, the output example is shown : 
+The matched blocks are :
+1st program : 
+Line 42:	mov r0,0
+Line 43:	mov r3,0x100
+Line 44:	mov r4,0x200
+Line 45:	mov r5,0x300
+
+2nd program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+Note : The files are made only for those matches whose match percentage is greater than the allowed percentage.
+
+
+
+Matrix and factors controlling output
+======================================
+
+Three factors can control the output which are defined in include/plagcheck.h : 
+#define threshold 1
+#define minblock 2
+#define allow 10
+
+where :
+threshold is the maximum lenshtein distance below which two blocks are considered a match.
+minblock is the minimum block size above which two blocks are considered a match.
+allow is the allowed match percentage, if the percentage match is greater than allow, only then it is considered for plagiarism.
+
+
+Matrix = [{Summation over all matched blocks (blocksize/levenshtein+1)}/{Total inst in prog 1 + prog 2}] * (threshold +1) * 100
+
+where matched blocks are block A of program 1 and block B of program 2 if their :
+i) Levenshtein distance <= threshold
+ii) blocksize > minblock
+where blocksize = min(blockA.size, blockB.size)
+
+
+
+Credits
+=======
+Parts of the program taken from the simpleRisc assembler (written by Dr Neeraj Goel).

@@ -1,0 +1,120 @@
+ .f:
+
+sub sp,sp,16
+st r0,[sp]
+st r1,4[sp]
+st r2,8[sp]
+st ra,12[sp]
+
+mov r4,0
+.loop1:
+cmp r4,5
+bgt .return1
+beq .return1
+add r0,r1,r2
+sub r1,r0,r2
+
+call .g
+add r2,r2,r6
+add r4,r4,1
+b .loop1
+
+.h:
+
+sub sp,sp,16
+st r0,[sp]
+st r1,4[sp]
+st r2,8[sp]
+st ra,12[sp]
+cmp r3,0
+beq .return2
+cmp r3,1
+beq .return3
+cmp r3,2
+beq .return4
+b .return5
+
+.g:
+sub sp,sp,16
+st r0,[sp]
+st r1,4[sp]
+st r2,8[sp]
+st ra,12[sp]
+mov r3,0
+call .h
+mov r0,r6
+mov r3,1
+call .h
+mov r1,r6
+mov r3,2
+call .h
+mov r2,r6
+b .return7
+
+.return2:
+add r6,r0,r1
+sub r6,r6,r2
+ld r0,[sp]
+ld r1,4[sp]
+ld r2,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.return3:
+sub r6,r0,r1
+add r6,r6,r2
+ld r0,[sp]
+ld r1,4[sp]
+ld r2,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.return4:
+add r6,r0,r1
+add r6,r6,r2
+ld r0,[sp]
+ld r1,4[sp]
+ld r2,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.return5:
+mov r6,0
+ld r0,[sp]
+ld r1,4[sp]
+ld r2,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.return7:
+add r6,r0,r1
+add r6,r6,r2
+ld r0,[sp]
+ld r1,4[sp]
+ld r2,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.return1:
+
+add r7,r0,r1
+add r7,r7,r2
+ld r0,[sp]
+ld r1,4[sp]
+ld r2,8[sp]
+ld ra,12[sp]
+add sp,sp,16
+ret
+
+.main:
+mov r0,10
+mov r1,12
+mov r2,-1
+call .f
+mov r3,r7
+.print r3 

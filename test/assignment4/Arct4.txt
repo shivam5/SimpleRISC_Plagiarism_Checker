@@ -1,0 +1,84 @@
+.main:
+mov r4,10  /*a=10*/
+mov r5,12  /*b=12*/
+mov r6,-1  /*c=-1*/   
+call .f
+b .exit
+
+
+
+.f:     /*f*/
+mov r9,0   
+.y:
+cmp r9,5
+beq .fin
+add r4,r5,r6
+sub r5,r4,r6
+call .g
+.temp:
+add r6,r6,r12
+add r9,r9,1
+b .y 
+
+
+.fin:
+mov r11,r4
+add r11,r11,r5
+add r11,r11,r6
+b .exit
+
+
+
+
+.g: /*g*/
+mov r7,0
+mov r0,r4
+mov r1,r5
+mov r2,r6
+call .h
+mov r0,r8
+mov r7,1
+call .h
+mov r1,r8
+mov r7,2
+call .h
+mov r2,r8
+mov r12,r0
+add r12,r12,r1
+add r12,r12,r2
+b .temp
+
+
+
+
+
+
+
+
+
+ .h: /*h*/
+mov r8,0
+cmp r7,0
+mov r8,r0  /*a+b-c*/
+add r8,r8,r1
+sub r8,r8,r2
+beq .h1 
+
+cmp r7,1
+mov r8,r0  /*a-b+c*/
+sub r8,r8,r1
+add r8,r8,r2
+beq .h1
+cmp r7,2
+mov r8,r0  /*a+b+c*/
+add r8,r8,r1
+add r8,r8,r2
+beq .h1
+mov r8,0
+.h1:
+ret
+
+
+
+.exit:
+print r11

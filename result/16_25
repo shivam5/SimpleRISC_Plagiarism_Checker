@@ -1,0 +1,95 @@
+(16,25)
+test/assignment3/2015csb1065.s
+test/assignment3/matrix.asm
+Match - 18.4932%
+
+The matched blocks are :
+1st program : 
+Line 21:add r6,r4,r5
+Line 22:st r6,[r7]
+Line 23:add r5,r5,1
+Line 24:add r7,r7,4
+Line 25:b .loop1
+
+2nd program : 
+Line 67:	.print r4
+Line 68:	st r4, 0x300[r10]	@C[i3]=temp
+Line 69:	add r3, r3, 1		@j++	
+Line 70:	add r10, r10, 4		@i3+=4
+Line 71:	b .loopj2
+
+
+The matched blocks are :
+1st program : 
+Line 28:add r4,r4,1
+Line 29:mov r5,0
+Line 30:b .loop1
+
+2nd program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+
+The matched blocks are :
+1st program : 
+Line 33:mov r4,0
+Line 34:mov r5,0
+Line 35:mov r7,r2
+Line 36:b .loop2     @call for initialisation of B matrix
+
+2nd program : 
+Line 42:	mov r1, 0			@i=0
+Line 43:	mov r2, 0			@i1=0
+Line 44:	mov r10, 0			@i3=0
+Line 45:	b .loopi2
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:mov r5,0
+Line 54:b .loop2
+
+2nd program : 
+Line 50:	mov r3, 0			@j=0
+Line 51:	mov r6, 0			@i2=0
+Line 52:	b .loopj2
+
+
+The matched blocks are :
+1st program : 
+Line 71:ld r4,[r7]
+Line 72:ld r5,[r9]
+Line 73:mul r6,r4,r5   @multiplication of corresponding elements of A's row and B's column
+Line 74:add r8,r8,r6   @addition of all the multiplied numbers to generate a single element of C
+Line 75:add r7,r7,4
+Line 76:add r9,r9,4
+Line 77:add r10,r10,1
+Line 78:b .mul_loop1
+
+2nd program : 
+Line 76:	ld r8, 0x100[r2]	@p1=A[i1]
+Line 77:	ld r9, 0x200[r6]	@p2=B[i2]
+Line 78:	mul r7, r8, r9		@temp2=p1*p2
+Line 79:	add r4, r4, r7		@temp+=temp2
+Line 80:	add r5, r5, 1		@k++	
+Line 81:	add r2, r2, 4		@i1+=4	
+Line 82:	add r6, r6, r11		@i2+=4*N
+Line 83:	b .loopk
+
+
+The matched blocks are :
+1st program : 
+Line 99:mov r5,0
+Line 100:mov r4,0
+Line 101:mul r13,r0,r0
+Line 102:b .cloop
+
+2nd program : 
+Line 42:	mov r1, 0			@i=0
+Line 43:	mov r2, 0			@i1=0
+Line 44:	mov r10, 0			@i3=0
+Line 45:	b .loopi2
+
+

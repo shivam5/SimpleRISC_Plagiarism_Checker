@@ -1,0 +1,65 @@
+(16,35)
+test/assignment3/2015csb1065.s
+test/assignment3/2015CSB1029.s
+Match - 18.75%
+
+The matched blocks are :
+1st program : 
+Line 21:add r6,r4,r5
+Line 22:st r6,[r7]
+Line 23:add r5,r5,1
+Line 24:add r7,r7,4
+Line 25:b .loop1
+
+2nd program : 
+Line 15:add r6,r5,r4      @executing the step A[i]j[]=i+j
+Line 16:st r6,[r1]        @store the result in memory
+Line 17:add r1, r1,4    @increement of memory address
+Line 18:add r5,r5,1    @increement of j
+Line 19:b .innerloop1   
+
+
+The matched blocks are :
+1st program : 
+Line 43:mul r9,r4,3
+Line 44:mul r10,r5,2
+Line 45:add r6,r9,r10
+Line 46:st r6,[r7]
+Line 47:add r7,r7,4
+Line 48:add r5,r5,1
+Line 49:b .loop2
+
+2nd program : 
+Line 35:mul r11,r5,3
+Line 36:mul r12,r4,2    
+Line 37:add r6,r11,r12   @r6 contains 2i+3j for corresponding values
+Line 38:st r6,[r2]      @storing to memeory
+Line 39:add r2,r2,4
+Line 40:add r5,r5,1   @increement of j
+Line 41:b .innerloop2
+
+
+The matched blocks are :
+1st program : 
+Line 68:sub r6,r7,r1
+Line 69:cmp r13,r6
+Line 70:beq .ini3
+
+2nd program : 
+Line 22:add r4,r4,1  @increement of i
+Line 23:cmp r4,r0
+Line 24:beq .initialize    @to initialize i again
+
+
+The matched blocks are :
+1st program : 
+Line 68:sub r6,r7,r1
+Line 69:cmp r13,r6
+Line 70:beq .ini3
+
+2nd program : 
+Line 44:add r4,r4,1  @increement of i
+Line 45:cmp r4 r0
+Line 46:beq .multipl
+
+

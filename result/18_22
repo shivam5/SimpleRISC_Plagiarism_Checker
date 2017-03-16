@@ -1,0 +1,77 @@
+(18,22)
+test/assignment3/2015csb1024_Pratham_assign2.s
+test/assignment3/array.txt
+Match - 13.9535%
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+

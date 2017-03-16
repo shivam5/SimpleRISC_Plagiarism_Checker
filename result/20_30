@@ -1,0 +1,140 @@
+(20,30)
+test/assignment3/assigment3.txt
+test/assignment3/csl211_3_edited.s
+Match - 32.9545%
+
+The matched blocks are :
+1st program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+2nd program : 
+Line 29:      add r4,r4,1
+Line 30:      mov r5,0 
+Line 31:      b .outer_loop
+
+
+The matched blocks are :
+1st program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+2nd program : 
+Line 57:     add r4,r4,1
+Line 58:     mov r5,0
+Line 59:     b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+2nd program : 
+Line 100:    add r4,r4,1
+Line 101:    mov r5,0 
+Line 102:    b .floop1   
+
+
+The matched blocks are :
+1st program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+2nd program : 
+Line 123:    add r4,r4,1
+Line 124:    mov r5,0
+Line 125:    b .finalloop1
+
+
+The matched blocks are :
+1st program : 
+Line 49:mov r4,1
+Line 50:mov r5,1
+Line 51:mov r6,1
+Line 52:b .loop5
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 49:mov r4,1
+Line 50:mov r5,1
+Line 51:mov r6,1
+Line 52:b .loop5
+
+2nd program : 
+Line 61:    mov r4,0
+Line 62:    mov r5,0
+Line 63:    mov r6,0
+
+
+The matched blocks are :
+1st program : 
+Line 60:cmp r5,r0
+Line 61:mov r11,0
+Line 62:bgt .icr
+
+2nd program : 
+Line 68:          cmp r0,r5
+Line 69:          mov r11,0             //Register to store the sum
+Line 70:          beq .return2
+
+
+The matched blocks are :
+1st program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+2nd program : 
+Line 29:      add r4,r4,1
+Line 30:      mov r5,0 
+Line 31:      b .outer_loop
+
+
+The matched blocks are :
+1st program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+2nd program : 
+Line 57:     add r4,r4,1
+Line 58:     mov r5,0
+Line 59:     b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+2nd program : 
+Line 100:    add r4,r4,1
+Line 101:    mov r5,0 
+Line 102:    b .floop1   
+
+
+The matched blocks are :
+1st program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+2nd program : 
+Line 123:    add r4,r4,1
+Line 124:    mov r5,0
+Line 125:    b .finalloop1
+
+

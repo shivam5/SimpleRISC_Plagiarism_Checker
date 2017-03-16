@@ -1,0 +1,151 @@
+(2,8)
+test/assignment3/code3.s
+test/assignment3/2015csb1032.asm
+Match - 77.1654%
+
+The matched blocks are :
+1st program : 
+Line 11:mul r6,r4,r0                      @r6 = N*i
+Line 12:add r6,r6,r5                      @r6 = (j+(N*i))
+Line 13:mul r6,r6,4                       @r6 = ((N*i)+j)*4
+Line 15:add r7,r4,r5                      @r7 = Base Matrix A [i+j]
+Line 16:mul r8,r4,2                       @2i = Base Matrix B [ROW]
+Line 17:mul r9,r5,3                       @3j = Base Matrix B [COLUMN]
+Line 18:add r8,r8,r9                      @r8=  Base Matrix B [2i+3j]
+Line 22:add r9,r1,r6                      @r9 = 0x100 + offset
+Line 23:add r10,r2,r6                     @r10= 0x200 + offset
+Line 25:st r7, 0[r9]
+Line 26:st r8,0[r10]
+Line 28:cmp r5,r11
+Line 29:beq .loljf
+
+2nd program : 
+Line 17:mul r6,r4,r0 @r6=i*N
+Line 18:add r6,r6,r5 @r6=(i*N)+j
+Line 19:mul r6,r6,4 @r6 = ((i*N)+j)*4
+Line 21:add r7,r4,r5 @r7=i+j
+Line 22:mul r8,r4,2 @2i
+Line 23:mul r9,r5,3 @3j
+Line 24:add r8,r8,r9 @r8=2i+3j
+Line 26:add r9,r1,r6 @r9=0x100+offset
+Line 27:add r10,r2,r6 @r10=0x200+offset
+Line 29:st r7, 0[r9]
+Line 30:st r8,0[r10]
+Line 32:cmp r5,r11
+Line 33:BEQ .jfail
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 37:.jfail : mov r5,0
+Line 38:cmp r4,r11
+Line 39:BEQ .ifail
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 93:.jfail1 : mov r5,0
+Line 94:cmp r4,r11
+Line 95:BEQ .ifail1
+
+
+The matched blocks are :
+1st program : 
+Line 49:mul r6,r4,r0                       @r6 = N*i
+Line 50:add r6,r6,r5                       @r6 = j +(N*i)
+Line 51:mul r6,r6,4                        @r6 = ((i*N)+j)*4
+Line 53:add r9,r3,r6
+Line 55:mov r13,0 @Initialising k 
+Line 56:mov r8,0 
+
+2nd program : 
+Line 50:mul r6,r4,r0 @r6=i*N
+Line 51:add r6,r6,r5 @r6=(i*N)+j
+Line 52:mul r6,r6,4 @r6 = ((i*N)+j)*4
+Line 57:add r9,r3,r6
+Line 59:mov r13,0 @k=0
+Line 60:mov r8,0 
+
+
+The matched blocks are :
+1st program : 
+Line 59:mul r6,r4,r0                       @r6=i*N
+Line 60:add r6,r6,r13                      @r6=(i*N)+k
+Line 61:mul r6,r6,4                        @r6 = ((i*N)+k)*4
+Line 63:add r7,r1,r6                       @r7=A+offset
+Line 64:ld r10, 0[r7]                      @r10=A[i][k] Loop1
+Line 66:mul r6,r13,r0                      @r6=k*N
+Line 67:add r6,r6,r5                       @r6=(k*N)+j
+Line 68:mul r6,r6,4                        @r6 = ((i*N)+j)*4
+Line 70:add r7,r2,r6                       @r7= B+offset
+Line 71:ld r12, 0[r7]                      @r11=B[k][j] Loop2
+Line 73:mul r10,r10,r12                    @r10=A[i][k]*B[k][j]
+Line 74:add r8,r8,r10
+Line 76:cmp r13,r11
+Line 77:beq .lolkf
+
+2nd program : 
+Line 63:mul r6,r4,r0 @r6=i*N
+Line 64:add r6,r6,r13 @r6=(i*N)+k
+Line 65:mul r6,r6,4 @r6 = ((i*N)+k)*4
+Line 67:add r7,r1,r6 @r7=A+offset
+Line 68:ld r10, 0[r7] @r10=A[i][]k
+Line 70:mul r6,r13,r0 @r6=k*N
+Line 71:add r6,r6,r5 @r6=(k*N)+j
+Line 72:mul r6,r6,4 @r6 = ((i*N)+j)*4
+Line 74:add r7,r2,r6 @r7= B+offset
+Line 75:ld r12, 0[r7] @r11=B[k][j]
+Line 77:mul r10,r10,r12 @r10=A[i][k]*B[k][j]
+Line 78:add r8,r8,r10
+Line 80:cmp r13,r11
+Line 81:BEQ .kfail1
+
+
+The matched blocks are :
+1st program : 
+Line 82:.print r8
+Line 83:st r8, 0[r9]
+Line 84:cmp r5,r11
+Line 85:beq .loljf1
+
+2nd program : 
+Line 86:.print r8
+Line 87:st r8, 0[r9]
+Line 88:cmp r5,r11
+Line 89:BEQ .jfail1
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 37:.jfail : mov r5,0
+Line 38:cmp r4,r11
+Line 39:BEQ .ifail
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 93:.jfail1 : mov r5,0
+Line 94:cmp r4,r11
+Line 95:BEQ .ifail1
+
+

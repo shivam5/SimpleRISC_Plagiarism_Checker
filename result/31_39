@@ -1,0 +1,74 @@
+(31,39)
+test/assignment3/matrix(1).s
+test/assignment3/matmul.s
+Match - 14.2857%
+
+The matched blocks are :
+1st program : 
+Line 26:        mul r6,r0,r4
+Line 27:        add r6,r6,r5
+Line 28:        mul r6,r6,4
+Line 29:        add r7,r1,r6
+Line 30:        add r8,r2,r6    
+Line 31:        add r9,r4,r5
+Line 32:        mul r10,r4,2
+Line 33:        mul r11,r5,3
+Line 34:        add r11,r10,r11
+Line 35:        st r9,0[r7]
+Line 36:        st r11,0[r8]
+Line 37:        add r5,r5,1
+Line 38:        b .nested_assign_loop
+
+2nd program : 
+Line 16:mul r6,r4,r0
+Line 17:add r6,r6,r5
+Line 18:lsl r6,r6,2
+Line 19:add r7,r6,r1                    @ Address A[i][j] = A + (i*N+j)*4
+Line 20:add r8,r6,r2                    @ Address B[i][j] = B + (i*N+j)*4
+Line 22:add r9,r4,r5
+Line 24:mul r11,r4,2
+Line 25:mul r12,r5,3
+Line 27:add r10,r11,r12
+Line 29:st r9,0[r7]                     @ A[i][j] = i + j
+Line 30:st r10,0[r8]                    @ B[i][j] = 2*i + 3*j
+Line 31:add r5,r5,1
+Line 32:b .iloopab
+
+
+The matched blocks are :
+1st program : 
+Line 41:	mov r4,0
+Line 42:	mov r5,0
+Line 43:	mov r6,0
+Line 44:	mov r7,0
+Line 45:	b .nested_nested_C
+
+2nd program : 
+Line 1:.main: mov r0,3                 @ N
+Line 2:mov r1,0x100                    @ base address A
+Line 3:mov r2,0x200                    @ base address B
+Line 4:mov r3,0x300                    @ base adddress C
+
+
+The matched blocks are :
+1st program : 
+Line 106:            mul r6,r0,r4
+Line 107:            add r6,r6,r5
+Line 108:            mul r6,r6,4
+Line 109:            add r7,r3,r6
+Line 110:            ld r9,0[r7]
+Line 111:            .print r9
+Line 112:            add r5,r5,1
+Line 113:            b .p_nested_C
+
+2nd program : 
+Line 97:mul r6,r4,r0
+Line 98:add r6,r6,r5
+Line 99:lsl r6,r6,2
+Line 100:add r6,r6,r3                    @ Address C[i][j] = C + (i*N+j)*4
+Line 102:ld r7,0[r6]
+Line 104:.print r7                       @ Printing C[i][j]
+Line 106:add r5,r5,1
+Line 107:b .iloopcprin
+
+

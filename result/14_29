@@ -1,0 +1,140 @@
+(14,29)
+test/assignment3/matrix.txt.txt
+test/assignment3/Uneet_2015csb1038Ass3.s.s
+Match - 55.0633%
+
+The matched blocks are :
+1st program : 
+Line 14:		mul r6,r2,r5  	//N*i
+Line 15:		add r6,r6,r3    	//N*i + j
+Line 16:		mul r6,r6,4	// (N*i+j)*4
+Line 17:		add r6,r6,r8	//[r8+imm]
+Line 18:		add r0,r2,r3	//i+j
+Line 19:		st r0,0[r6]		//store r0 in memory address r6
+Line 21:		add r3,r3,1	//j++
+Line 22:		b .loop2
+
+2nd program : 
+Line 20:	mul r7,r0,r5               
+Line 21:	add r7,r7,r6
+Line 22:	mul r7,r7,4
+Line 23:	add r7,r1,r7               //r1+4(N.i+j)
+Line 24:	add r8,r5,r6               
+Line 25:	st r8,[r7]
+Line 26:	add r6,r6,1                //j=j+1
+Line 27:	b .loop2r1
+
+
+The matched blocks are :
+1st program : 
+Line 38:		mul r6,r2,r5  	        //N*i
+Line 39:		add r6,r6,r3           	//N*i + j
+Line 40:		mul r6,r6,4	        // (N*i+j)*4
+Line 41:		add r6,r6,r9	        //[r9+imm]
+Line 42:		mul r11,r2,2	        //2i
+Line 43:		mul r13,r3,3	        //3j
+Line 44:		add r0,r11,r13	        //2i+3j
+Line 45:		st r0,0[r6]		//store r0 in memory address r6
+Line 47:		add r3,r3,1	        //j++
+Line 48:		b .loop4
+
+2nd program : 
+Line 49:	mul r7,r0,r5
+Line 50:	add r7,r7,r6
+Line 51:	mul r7,r7,4
+Line 52:	add r7,r2,r7
+Line 53:	mul r10,r5,2
+Line 54:	mul r11,r6,3
+Line 55:	add r8,r10,r11
+Line 56:	st r8,[r7]
+Line 57:	add r6,r6,1
+Line 58:	b .loop2r2
+
+
+The matched blocks are :
+1st program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+2nd program : 
+Line 66:	mov r5,0                   //set all the indexes to zero
+Line 67:	mov r6,0
+Line 68:	mov r7,0
+Line 69:	mov r8,0
+Line 70:	mov r10,0
+Line 71:	mov r11,0
+
+
+The matched blocks are :
+1st program : 
+Line 72:			mul r6,r2,r5        // i*size of matrix
+Line 73:			add r6,r6,r4        // (i*N+k)   ,N is size of matrix
+Line 74:			mul r6,r6,4         //(i*N+k)*4
+Line 75:			add r6,r6,r8        //
+Line 76:			ld r0,0[r6]         //r0=A[i][k]
+Line 77:			mul r7,r4,r5        
+Line 78:			add r7,r7,r3
+Line 79:			mul r7,r7,4         //(k*n+j)*4
+Line 80:			add r7,r7,r9
+Line 81:			ld r1,0[r7]          //r1=B[k][j]
+Line 82:			mul r6,r1,r0        //product
+Line 83:			add r13,r13,r6
+Line 84:			add r4,r4,1
+Line 85:			b .loop7
+
+2nd program : 
+Line 87:	mul r8,r5,r0
+Line 88:	add r8,r8,r7
+Line 89:	mul r8,r8,4
+Line 90:	add r8,r8,r1
+Line 91:	ld r8,[r8]
+Line 93:	mul r9,r7,r0
+Line 94:	add r9,r9,r6
+Line 95:	mul r9,r9,4
+Line 96:	add r9,r9,r2
+Line 97:	ld r9,[r9]
+Line 99:	mul r9,r9,r8           // multipl A and B
+Line 100:	add r11,r11,r9         // sum=sum+mul(A,B)
+Line 101:	add r7,r7,1
+Line 102:	b .loopc3
+
+
+The matched blocks are :
+1st program : 
+Line 97:			mov r3,0                
+Line 98:			add r2,r2,1            // i++
+Line 99:			b .loop5               // going to loop 5
+
+2nd program : 
+Line 30:	mov r6,0
+Line 31:	add r5,r5,1              //i=i+1
+Line 32:	b .loop1r1
+
+
+The matched blocks are :
+1st program : 
+Line 97:			mov r3,0                
+Line 98:			add r2,r2,1            // i++
+Line 99:			b .loop5               // going to loop 5
+
+2nd program : 
+Line 61:	mov r6,0
+Line 62:	add r5,r5,1
+Line 63:	b .loop1r2
+
+
+The matched blocks are :
+1st program : 
+Line 97:			mov r3,0                
+Line 98:			add r2,r2,1            // i++
+Line 99:			b .loop5               // going to loop 5
+
+2nd program : 
+Line 117:	mov r6,0                 
+Line 118:	add r5,r5,1
+Line 119:	b .loopc1
+
+

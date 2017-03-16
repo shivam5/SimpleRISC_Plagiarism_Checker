@@ -1,0 +1,191 @@
+(2,5)
+test/assignment3/code3.s
+test/assignment3/MatrixMultiplication.s
+Match - 40.2985%
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 13:add r4,r4,1
+Line 14:cmp r4,r0
+Line 15:beq .multiply       // Call the statement to multiply A and B
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 19:add r5,r5,1
+Line 20:cmp r5,r0
+Line 21:beq .increment    // call for outer loop
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 44:add r4,r4,1
+Line 45:cmp r4,r0
+Line 46:beq .display    // breaking condition of outer loop
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 50:add r5,r5,1
+Line 52:cmp r5,r0
+Line 53:beq .loop1    // call for outer loop
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 65:add r6 ,r6,1
+Line 66:cmp r6,r0
+Line 67:beq .loop2     // breaking condition for common loop
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 97:add r4,r4,1
+Line 98:cmp r4,r0
+Line 99:beq .EXIT    // breaking Condition
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 103:add r5,r5,1
+Line 104:cmp r5,r0
+Line 105:beq .loopOuter
+
+
+The matched blocks are :
+1st program : 
+Line 49:mul r6,r4,r0                       @r6 = N*i
+Line 50:add r6,r6,r5                       @r6 = j +(N*i)
+Line 51:mul r6,r6,4                        @r6 = ((i*N)+j)*4
+Line 53:add r9,r3,r6
+Line 55:mov r13,0 @Initialising k 
+Line 56:mov r8,0 
+
+2nd program : 
+Line 55:mul r7,r4,r0    //i*n
+Line 56:add r8,r7,r5    // i*n +j
+Line 57:mul r8,r8,4    // (i*n+j)*4
+Line 59:add r8,r8,r3  //C[i][j]  address
+Line 61:mov r6,-1      //temp variable k=-1
+Line 62:mov r13,0
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 13:add r4,r4,1
+Line 14:cmp r4,r0
+Line 15:beq .multiply       // Call the statement to multiply A and B
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 19:add r5,r5,1
+Line 20:cmp r5,r0
+Line 21:beq .increment    // call for outer loop
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 44:add r4,r4,1
+Line 45:cmp r4,r0
+Line 46:beq .display    // breaking condition of outer loop
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 50:add r5,r5,1
+Line 52:cmp r5,r0
+Line 53:beq .loop1    // call for outer loop
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 65:add r6 ,r6,1
+Line 66:cmp r6,r0
+Line 67:beq .loop2     // breaking condition for common loop
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 97:add r4,r4,1
+Line 98:cmp r4,r0
+Line 99:beq .EXIT    // breaking Condition
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 103:add r5,r5,1
+Line 104:cmp r5,r0
+Line 105:beq .loopOuter
+
+

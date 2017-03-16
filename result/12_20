@@ -1,0 +1,36 @@
+(12,20)
+test/assignment3/2015csb1034labassignment3.txt
+test/assignment3/assigment3.txt
+Match - 11.1111%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,2     @N
+Line 3:mov r1,0x100 @A
+Line 4:mov r2,0x200 @B
+Line 5:mov r12,0x300
+Line 10:mov r10,1
+Line 11:mov r5,0
+
+2nd program : 
+Line 2:mov r0,3
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r3,0x300
+Line 6:mov r4,1
+Line 7:mov r5,1
+
+
+The matched blocks are :
+1st program : 
+Line 38:mov r3,0
+Line 39:mov r4,0
+Line 40:mov r5,0
+
+2nd program : 
+Line 49:mov r4,1
+Line 50:mov r5,1
+Line 51:mov r6,1
+Line 52:b .loop5
+
+

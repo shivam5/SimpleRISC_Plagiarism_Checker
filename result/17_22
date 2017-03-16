@@ -1,0 +1,53 @@
+(17,22)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/array.txt
+Match - 17.2662%
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+

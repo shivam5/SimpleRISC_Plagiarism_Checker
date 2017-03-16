@@ -1,0 +1,235 @@
+(5,17)
+test/assignment3/MatrixMultiplication.s
+test/assignment3/FinalCompltedHOMEWORK3.txt
+Match - 42%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,3   // size of matrix
+Line 3:mov r1,0x100   // base address of A matrix 
+Line 4:mov r2,0x200   // base address of B matrix
+Line 5:mov r3,0x300   // base address of C matrix
+
+2nd program : 
+Line 2:       mov r0,3   @N
+Line 3:       mov r1,0x100    
+Line 4:       mov r2,0x200    
+Line 5:       mov r3,0x300
+Line 6:       add r13,r0,1
+
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,3   // size of matrix
+Line 3:mov r1,0x100   // base address of A matrix 
+Line 4:mov r2,0x200   // base address of B matrix
+Line 5:mov r3,0x300   // base address of C matrix
+
+2nd program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+
+The matched blocks are :
+1st program : 
+Line 13:add r4,r4,1
+Line 14:cmp r4,r0
+Line 15:beq .multiply       // Call the statement to multiply A and B
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 13:add r4,r4,1
+Line 14:cmp r4,r0
+Line 15:beq .multiply       // Call the statement to multiply A and B
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 19:add r5,r5,1
+Line 20:cmp r5,r0
+Line 21:beq .increment    // call for outer loop
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 19:add r5,r5,1
+Line 20:cmp r5,r0
+Line 21:beq .increment    // call for outer loop
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 44:add r4,r4,1
+Line 45:cmp r4,r0
+Line 46:beq .display    // breaking condition of outer loop
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 44:add r4,r4,1
+Line 45:cmp r4,r0
+Line 46:beq .display    // breaking condition of outer loop
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 50:add r5,r5,1
+Line 52:cmp r5,r0
+Line 53:beq .loop1    // call for outer loop
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 50:add r5,r5,1
+Line 52:cmp r5,r0
+Line 53:beq .loop1    // call for outer loop
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 65:add r6 ,r6,1
+Line 66:cmp r6,r0
+Line 67:beq .loop2     // breaking condition for common loop
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 65:add r6 ,r6,1
+Line 66:cmp r6,r0
+Line 67:beq .loop2     // breaking condition for common loop
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 69:mul r9,r4,r0
+Line 70:add r9,r9,r6
+Line 71:mul r9,r9,4     //[i][k]  address
+Line 72:add r9,r9,r1  
+Line 74:ld r10,[r9]      //  retrieving A[i][k] address value
+Line 76:mul r11,r6,r0
+Line 77:add r11,r11,r5
+Line 78:mul r11,r11,4
+Line 79:add r11,r11,r2
+Line 81:ld r12,[r11]      //b[k][j]
+Line 83:mul r10,r10,r12   //a[i][k]*b[k][j]
+Line 85:add r13,r13,r10
+Line 86:st r13,[r8]     // storing the value i.e C[i][j] in memory
+Line 88:b .loop3
+
+2nd program : 
+Line 89:       mul r7,r4,r13  @3*i
+Line 90:       add r7,r7,r6  @3*i+k
+Line 91:       mul r7,r7,4    @(3*i+k)*4
+Line 92:       add r7,r7,r1   @(3*i+k)*4+base address of A
+Line 93:       ld r8,0[r7]
+Line 95:       mul r9,r6,r13  @3*k
+Line 96:       add r9,r9,r5  @3*k+j
+Line 97:       mul r9,r9,4    @(3*k+j)*4
+Line 98:       add r9,r9,r2   @(3*k+j)*4+base address of B 
+Line 99:       ld r10,0[r9]
+Line 101:       mul r11,r8,r10
+Line 102:       add r12,r12,r11
+Line 103:       add r6,r6,1
+Line 104:       b .loop6
+
+
+The matched blocks are :
+1st program : 
+Line 97:add r4,r4,1
+Line 98:cmp r4,r0
+Line 99:beq .EXIT    // breaking Condition
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 97:add r4,r4,1
+Line 98:cmp r4,r0
+Line 99:beq .EXIT    // breaking Condition
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 103:add r5,r5,1
+Line 104:cmp r5,r0
+Line 105:beq .loopOuter
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 103:add r5,r5,1
+Line 104:cmp r5,r0
+Line 105:beq .loopOuter
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+

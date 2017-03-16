@@ -1,0 +1,45 @@
+(31,37)
+test/assignment3/matrix(1).s
+test/assignment3/2015csb1117_matrix.asm
+Match - 12.4294%
+
+The matched blocks are :
+1st program : 
+Line 7:    mov r1,0x100
+Line 8:    mov r2,0x200
+Line 9:    mov r3,0x300
+Line 10:    mov r4,0
+Line 11:    mov r5,0
+Line 12:    b .nested_assign_loop    
+
+2nd program : 
+Line 1:mov r0,4       @ order of matrix 
+Line 2:mov r1,0x100 	@base address of first matrix
+Line 3:mov r2,0x200 	@	       second	
+Line 4:mov r3,0x300 	@ 	       third	
+Line 5:mov r4,-1	   	@ index for rows
+Line 6:mov r5,0     	@ index for columns		
+
+
+The matched blocks are :
+1st program : 
+Line 106:            mul r6,r0,r4
+Line 107:            add r6,r6,r5
+Line 108:            mul r6,r6,4
+Line 109:            add r7,r3,r6
+Line 110:            ld r9,0[r7]
+Line 111:            .print r9
+Line 112:            add r5,r5,1
+Line 113:            b .p_nested_C
+
+2nd program : 
+Line 98:	mul r6,r0,r4
+Line 99:	add r6,r6,r5	
+Line 100:	mul r6,r6,4
+Line 101:	add r3,r3,r6 	@address 
+Line 102:	ld r7,[r3]
+Line 103:	.print r7
+Line 104:	add r5,r5,1
+Line 105:	b .finloopj
+
+

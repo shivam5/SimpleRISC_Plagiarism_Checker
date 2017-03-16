@@ -1,0 +1,39 @@
+(3,17)
+test/assignment3/Matrix_multiplication.s
+test/assignment3/FinalCompltedHOMEWORK3.txt
+Match - 16.8675%
+
+The matched blocks are :
+1st program : 
+Line 73:MUL R5, R0, R1
+Line 74:ADD R5, R5, R8
+Line 75:MUL R5, R5, 4
+Line 76:ADD R5, R5, R3
+Line 78:LD R9, 0[R5]  //Loading A[i][k]
+Line 80:MUL R5, R0, R8
+Line 81:ADD R5, R5, R2
+Line 82:MUL R5, R5, 4
+Line 83:ADD R5, R5, R6
+Line 85:LD R10, 0[R5]  //Loading B[k][j]
+Line 87:MUL R9, R9, R10
+Line 88:ADD R4, R4, R9  //Adding to the sum.
+Line 90:ADD R8, R8, 1
+Line 91:B .inner_inner_loop_product_condition
+
+2nd program : 
+Line 89:       mul r7,r4,r13  @3*i
+Line 90:       add r7,r7,r6  @3*i+k
+Line 91:       mul r7,r7,4    @(3*i+k)*4
+Line 92:       add r7,r7,r1   @(3*i+k)*4+base address of A
+Line 93:       ld r8,0[r7]
+Line 95:       mul r9,r6,r13  @3*k
+Line 96:       add r9,r9,r5  @3*k+j
+Line 97:       mul r9,r9,4    @(3*k+j)*4
+Line 98:       add r9,r9,r2   @(3*k+j)*4+base address of B 
+Line 99:       ld r10,0[r9]
+Line 101:       mul r11,r8,r10
+Line 102:       add r12,r12,r11
+Line 103:       add r6,r6,1
+Line 104:       b .loop6
+
+

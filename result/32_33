@@ -1,0 +1,101 @@
+(32,33)
+test/assignment3/mine.s
+test/assignment3/assignment.s
+Match - 16.7832%
+
+The matched blocks are :
+1st program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+2nd program : 
+Line 20:add r1,r1,1
+Line 21:cmp r0,r1
+Line 22:bgt .loop
+
+
+The matched blocks are :
+1st program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+2nd program : 
+Line 42:add r1,r1,1
+Line 43:cmp r0,r1
+Line 44:bgt .loopb
+
+
+The matched blocks are :
+1st program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+2nd program : 
+Line 78:add r1,r1,1
+Line 79:cmp r0,r1
+Line 80:bgt .loope
+
+
+The matched blocks are :
+1st program : 
+Line 29:add r4 r4 1          
+Line 30:cmp r0 r4                                  @check i
+Line 31:bgt .loop1
+
+2nd program : 
+Line 96:add r1,r1,1
+Line 97:cmp r0,r1
+Line 98:bgt .loopx
+
+
+The matched blocks are :
+1st program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+2nd program : 
+Line 20:add r1,r1,1
+Line 21:cmp r0,r1
+Line 22:bgt .loop
+
+
+The matched blocks are :
+1st program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+2nd program : 
+Line 42:add r1,r1,1
+Line 43:cmp r0,r1
+Line 44:bgt .loopb
+
+
+The matched blocks are :
+1st program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+2nd program : 
+Line 78:add r1,r1,1
+Line 79:cmp r0,r1
+Line 80:bgt .loope
+
+
+The matched blocks are :
+1st program : 
+Line 81:add r4 r4 1
+Line 82:cmp r0 r4
+Line 83:bgt .loop4
+
+2nd program : 
+Line 96:add r1,r1,1
+Line 97:cmp r0,r1
+Line 98:bgt .loopx
+
+

@@ -1,0 +1,105 @@
+(17,18)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/2015csb1024_Pratham_assign2.s
+Match - 17.1233%
+
+The matched blocks are :
+1st program : 
+Line 2:       mov r0,3   @N
+Line 3:       mov r1,0x100    
+Line 4:       mov r2,0x200    
+Line 5:       mov r3,0x300
+Line 6:       add r13,r0,1
+
+2nd program : 
+Line 7:mov r1,0x100
+Line 8:mov r2,0x200
+Line 9:mov r3,0x300
+Line 13:mov r4,-1
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+
+The matched blocks are :
+1st program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+2nd program : 
+Line 7:mov r1,0x100
+Line 8:mov r2,0x200
+Line 9:mov r3,0x300
+Line 13:mov r4,-1
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+

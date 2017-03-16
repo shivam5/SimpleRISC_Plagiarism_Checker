@@ -1,0 +1,85 @@
+(12,22)
+test/assignment3/2015csb1034labassignment3.txt
+test/assignment3/array.txt
+Match - 34.188%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,2     @N
+Line 3:mov r1,0x100 @A
+Line 4:mov r2,0x200 @B
+Line 5:mov r12,0x300
+Line 10:mov r10,1
+Line 11:mov r5,0
+
+2nd program : 
+Line 3:    mov r1,0x100
+Line 4:    mov r2,0x200
+Line 5:    mov r10,0x300
+Line 6:    mov r12,0
+Line 7:    mov r0,2
+Line 8:    mov r6,0
+
+
+The matched blocks are :
+1st program : 
+Line 35:add r3,r3,1
+Line 36:cmp r0,r3
+Line 37:bgt .loop_1
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 35:add r3,r3,1
+Line 36:cmp r0,r3
+Line 37:bgt .loop_1
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+
+The matched blocks are :
+1st program : 
+Line 64:add r12,r12,4
+Line 65:add r4,r4,1
+Line 66:cmp r0,r4
+Line 67:bgt .loop_4
+
+2nd program : 
+Line 11:   add r12,r12,1
+Line 12:   mov r13,1
+Line 13:   cmp r12,r0
+Line 14:   bgt .return
+
+
+The matched blocks are :
+1st program : 
+Line 68:add r3,r3,1
+Line 69:cmp r0,r3
+Line 70:bgt .loop_3
+
+2nd program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+
+The matched blocks are :
+1st program : 
+Line 68:add r3,r3,1
+Line 69:cmp r0,r3
+Line 70:bgt .loop_3
+
+2nd program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+

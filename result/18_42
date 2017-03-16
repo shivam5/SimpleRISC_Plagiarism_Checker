@@ -1,0 +1,200 @@
+(18,42)
+test/assignment3/2015csb1024_Pratham_assign2.s
+test/assignment3/final.s
+Match - 29.3413%
+
+The matched blocks are :
+1st program : 
+Line 7:mov r1,0x100
+Line 8:mov r2,0x200
+Line 9:mov r3,0x300
+Line 13:mov r4,-1
+
+2nd program : 
+Line 2:mov r0,3
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r3,0x300
+Line 10:mov r4,0
+
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 27:add r4,r4,1 
+Line 28:cmp r0,r4
+Line 29:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 52:add r4,r4,1 
+Line 53:cmp r0,r4
+Line 54:bgt .loop3
+
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 95:add r5,r5,1
+Line 96:cmp r0,r5
+Line 97:bgt .loop6
+
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 98:add r4,r4,1
+Line 99:cmp r0,r4
+Line 100:bgt .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 15:add r4,r4,1
+Line 16:cmp r4,r0
+Line 17:beq .multiply
+
+2nd program : 
+Line 119:add r4,r4,1
+Line 120:cmp r0,r4
+Line 121:bgt .loop8 
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 27:add r4,r4,1 
+Line 28:cmp r0,r4
+Line 29:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 52:add r4,r4,1 
+Line 53:cmp r0,r4
+Line 54:bgt .loop3
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 95:add r5,r5,1
+Line 96:cmp r0,r5
+Line 97:bgt .loop6
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 98:add r4,r4,1
+Line 99:cmp r0,r4
+Line 100:bgt .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:cmp r4,r0
+Line 54:beq .display
+
+2nd program : 
+Line 119:add r4,r4,1
+Line 120:cmp r0,r4
+Line 121:bgt .loop8 
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 27:add r4,r4,1 
+Line 28:cmp r0,r4
+Line 29:bgt .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 52:add r4,r4,1 
+Line 53:cmp r0,r4
+Line 54:bgt .loop3
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 95:add r5,r5,1
+Line 96:cmp r0,r5
+Line 97:bgt .loop6
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 98:add r4,r4,1
+Line 99:cmp r0,r4
+Line 100:bgt .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 58:add r5,r5,1
+Line 59:cmp r5,r0
+Line 60:beq .loopi
+
+2nd program : 
+Line 119:add r4,r4,1
+Line 120:cmp r0,r4
+Line 121:bgt .loop8 
+
+

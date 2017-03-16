@@ -1,0 +1,81 @@
+(6,30)
+test/assignment3/architec.txt
+test/assignment3/csl211_3_edited.s
+Match - 13.3333%
+
+The matched blocks are :
+1st program : 
+Line 40:mov r0,0x100
+Line 41:mov r1,0x200
+Line 42:mov r4,0
+Line 43:mov r5,0
+Line 44:mov r6,0
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 50:cmp r3,r5
+Line 51:add r4,r4,1
+Line 52:beq .mul1
+
+2nd program : 
+Line 68:          cmp r0,r5
+Line 69:          mov r11,0             //Register to store the sum
+Line 70:          beq .return2
+
+
+The matched blocks are :
+1st program : 
+Line 56:cmp r3,r6
+Line 57:add r5,r5,1
+Line 58:beq .mulfinal
+
+2nd program : 
+Line 68:          cmp r0,r5
+Line 69:          mov r11,0             //Register to store the sum
+Line 70:          beq .return2
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 7:    mov r4,0           //i index
+Line 8:    mov r5,0          //j index
+Line 9:    sub r8,r0,1
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 61:    mov r4,0
+Line 62:    mov r5,0
+Line 63:    mov r6,0
+
+

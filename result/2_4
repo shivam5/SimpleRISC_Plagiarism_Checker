@@ -1,0 +1,77 @@
+(2,4)
+test/assignment3/code3.s
+test/assignment3/archi_assign3.asm
+Match - 13.3333%
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+
+The matched blocks are :
+1st program : 
+Line 34:.loljf : mov r5,0
+Line 35:cmp r4,r11
+Line 36:beq .lolif
+
+2nd program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+
+The matched blocks are :
+1st program : 
+Line 89:.loljf1 : mov r5,0
+Line 90:cmp r4,r11
+Line 91:beq .lolif1
+
+2nd program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+

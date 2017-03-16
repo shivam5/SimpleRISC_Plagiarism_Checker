@@ -1,0 +1,56 @@
+(14,23)
+test/assignment3/matrix.txt.txt
+test/assignment3/matrix_multiply.asm
+Match - 13.0137%
+
+The matched blocks are :
+1st program : 
+Line 14:		mul r6,r2,r5  	//N*i
+Line 15:		add r6,r6,r3    	//N*i + j
+Line 16:		mul r6,r6,4	// (N*i+j)*4
+Line 17:		add r6,r6,r8	//[r8+imm]
+Line 18:		add r0,r2,r3	//i+j
+Line 19:		st r0,0[r6]		//store r0 in memory address r6
+Line 21:		add r3,r3,1	//j++
+Line 22:		b .loop2
+
+2nd program : 
+Line 92:mul r12,r4,r0
+Line 93:add r12,r12,r5
+Line 94:mul r12,r12,4
+Line 95:add r12,r12,r3
+Line 96:.print r7
+Line 97:st r7,[r12]                                  @ storing final matrix C
+Line 99:add r5,r5,1
+Line 100:b .l2
+
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 45:mov r4,0
+Line 46:mov r5,0
+Line 47:mov r6,0
+
+
+The matched blocks are :
+1st program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+2nd program : 
+Line 2:mov r0,2                          @ giving the value of n
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r3,0x300
+Line 6:mov r4,0
+Line 7:mov r5,0
+
+

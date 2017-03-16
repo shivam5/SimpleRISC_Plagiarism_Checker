@@ -1,0 +1,96 @@
+(36,39)
+test/assignment3/archi3.s
+test/assignment3/matmul.s
+Match - 38.0368%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,3
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r13,0x300
+Line 7:mov r5,0
+
+2nd program : 
+Line 1:.main: mov r0,3                 @ N
+Line 2:mov r1,0x100                    @ base address A
+Line 3:mov r2,0x200                    @ base address B
+Line 4:mov r3,0x300                    @ base adddress C
+
+
+The matched blocks are :
+1st program : 
+Line 53:mul r8,r4,r0
+Line 54:add r8,r8,r6
+Line 55:lsl r8,r8,2
+Line 56:add r8,r8,r1
+Line 58:mul r9,r6,r0
+Line 59:add r9,r9,r5
+Line 60:lsl r9,r9,2
+Line 61:add r9,r9,r2
+Line 62:ld r10,0[r8]
+Line 63:ld r11,0[r9]
+Line 64:mul r10,r10,r11
+Line 66:add r7,r7,r10
+Line 68:add r6,r6,1
+Line 70:b .loop4
+
+2nd program : 
+Line 53:mul r7,r4,r0
+Line 54:add r7,r7,r6
+Line 55:lsl r7,r7,2
+Line 56:add r7,r7,r1                    @ Address A[i][k] = A + (i*N+k)*4
+Line 58:mul r8,r6,r0
+Line 59:add r8,r8,r5
+Line 60:lsl r8,r8,2
+Line 61:add r8,r8,r2                    @ Address B[k][j] = B + (k*N+j)*4
+Line 63:ld r11,0[r7]
+Line 64:ld r12,0[r8]
+Line 65:mul r11,r11,r12
+Line 67:add r10,r10,r11                 @ temp = temp + A[i][k]*B[k][j]
+Line 69:add r6,r6,1
+Line 70:b .cloopc
+
+
+The matched blocks are :
+1st program : 
+Line 73:mul r8,r4,r0
+Line 74:add r8,r8,r5
+Line 75:lsl r8,r8,2
+Line 76:add r8,r8,r13
+Line 77:st r7,0[r8]
+Line 78:add r5,r5,1
+Line 79:b .loop3
+
+2nd program : 
+Line 73:mul r9,r4,r0
+Line 74:add r9,r9,r5
+Line 75:lsl r9,r9,2
+Line 76:add r9,r9,r3                    @ Address C[i][j] = C + (i*N+j)*4
+Line 78:st r10,0[r9]                    @ C[i][j] = temp
+Line 80:add r5,r5,1
+Line 81:b .iloopc
+
+
+The matched blocks are :
+1st program : 
+Line 97:mul r6,r4,r0
+Line 98:add r6,r6,r5
+Line 100:lsl r6,r6,2
+Line 101:add r6,r6,r13
+Line 103:ld r10,0[r6]
+Line 104:.print r10
+Line 106:add r5,r5,1
+Line 107:b .loop6
+
+2nd program : 
+Line 97:mul r6,r4,r0
+Line 98:add r6,r6,r5
+Line 99:lsl r6,r6,2
+Line 100:add r6,r6,r3                    @ Address C[i][j] = C + (i*N+j)*4
+Line 102:ld r7,0[r6]
+Line 104:.print r7                       @ Printing C[i][j]
+Line 106:add r5,r5,1
+Line 107:b .iloopcprin
+
+

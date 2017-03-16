@@ -1,0 +1,51 @@
+(17,24)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/NIKHIL_N_2015csb1020.s
+Match - 21.118%
+
+The matched blocks are :
+1st program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+2nd program : 
+Line 45:  mov r7,0
+Line 46:  mov r8,0
+Line 47:   mov r5,0
+
+
+The matched blocks are :
+1st program : 
+Line 89:       mul r7,r4,r13  @3*i
+Line 90:       add r7,r7,r6  @3*i+k
+Line 91:       mul r7,r7,4    @(3*i+k)*4
+Line 92:       add r7,r7,r1   @(3*i+k)*4+base address of A
+Line 93:       ld r8,0[r7]
+Line 95:       mul r9,r6,r13  @3*k
+Line 96:       add r9,r9,r5  @3*k+j
+Line 97:       mul r9,r9,4    @(3*k+j)*4
+Line 98:       add r9,r9,r2   @(3*k+j)*4+base address of B 
+Line 99:       ld r10,0[r9]
+Line 101:       mul r11,r8,r10
+Line 102:       add r12,r12,r11
+Line 103:       add r6,r6,1
+Line 104:       b .loop6
+
+2nd program : 
+Line 68:     mul r9,r7,r0
+Line 69:     add r9,r9,r5
+Line 70:     mul r9,r9,4
+Line 71:     add r9,r9,r2
+Line 72:     ld  r12,[r9]
+Line 73:     mul r9,r5,r0
+Line 74:     add r9,r9,r8
+Line 78:     mul r9,r9,4
+Line 79:     add r9,r9,r1
+Line 80:     ld  r13,[r9]
+Line 81:     mul r13,r12,r13
+Line 82:    add r4,r4,r13
+Line 83:   add r5,r5,1
+Line 84:   b .lloop3
+
+

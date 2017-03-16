@@ -1,0 +1,81 @@
+(16,20)
+test/assignment3/2015csb1065.s
+test/assignment3/assigment3.txt
+Match - 19.3939%
+
+The matched blocks are :
+1st program : 
+Line 28:add r4,r4,1
+Line 29:mov r5,0
+Line 30:b .loop1
+
+2nd program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 28:add r4,r4,1
+Line 29:mov r5,0
+Line 30:b .loop1
+
+2nd program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 33:mov r4,0
+Line 34:mov r5,0
+Line 35:mov r7,r2
+Line 36:b .loop2     @call for initialisation of B matrix
+
+2nd program : 
+Line 49:mov r4,1
+Line 50:mov r5,1
+Line 51:mov r6,1
+Line 52:b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:mov r5,0
+Line 54:b .loop2
+
+2nd program : 
+Line 44: add r4,r4,1
+Line 45:mov r5,1
+Line 46:b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 52:add r4,r4,1
+Line 53:mov r5,0
+Line 54:b .loop2
+
+2nd program : 
+Line 66:add r4,r4,1
+Line 67:mov r5,1
+Line 68:b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 99:mov r5,0
+Line 100:mov r4,0
+Line 101:mul r13,r0,r0
+Line 102:b .cloop
+
+2nd program : 
+Line 49:mov r4,1
+Line 50:mov r5,1
+Line 51:mov r6,1
+Line 52:b .loop5
+
+

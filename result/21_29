@@ -1,0 +1,57 @@
+(21,29)
+test/assignment3/ArchiCode3.s
+test/assignment3/Uneet_2015csb1038Ass3.s.s
+Match - 24.8447%
+
+The matched blocks are :
+1st program : 
+Line 2:         mov r0,3                   
+Line 3:         mov r2,0x100                       //defining initial memory adresses
+Line 4:         mov r3,0x200
+Line 5:         mov r4,0x300
+Line 6:         mov r5,0                           //i
+Line 7:         mov r10,0
+
+2nd program : 
+Line 66:	mov r5,0                   //set all the indexes to zero
+Line 67:	mov r6,0
+Line 68:	mov r7,0
+Line 69:	mov r8,0
+Line 70:	mov r10,0
+Line 71:	mov r11,0
+
+
+The matched blocks are :
+1st program : 
+Line 59:                   mul r9,r0,r5
+Line 60:                   add r9,r9,r8
+Line 61:                   mul r9,r9,4
+Line 62:                   add r9,r9,r2                 //a ready
+Line 64:                   ld r10,[r9]                  //a ready
+Line 66:                   mul r11,r8,r0
+Line 67:                   add r11,r11,r7
+Line 68:                   mul r11,r11,4
+Line 69:                   add r11,r11,r3                //b ready
+Line 71:                   ld r12,[r11]                  //b ready
+Line 73:                   mul r13,r10,r12
+Line 74:                   add r14,r14,r13               //r14 final useful value to be stored
+Line 76:                   add r8,r8,1
+Line 77:             b .l3
+
+2nd program : 
+Line 87:	mul r8,r5,r0
+Line 88:	add r8,r8,r7
+Line 89:	mul r8,r8,4
+Line 90:	add r8,r8,r1
+Line 91:	ld r8,[r8]
+Line 93:	mul r9,r7,r0
+Line 94:	add r9,r9,r6
+Line 95:	mul r9,r9,4
+Line 96:	add r9,r9,r2
+Line 97:	ld r9,[r9]
+Line 99:	mul r9,r9,r8           // multipl A and B
+Line 100:	add r11,r11,r9         // sum=sum+mul(A,B)
+Line 101:	add r7,r7,1
+Line 102:	b .loopc3
+
+

@@ -1,0 +1,79 @@
+(26,31)
+test/assignment3/HWStartwith0.s
+test/assignment3/matrix(1).s
+Match - 26.8817%
+
+The matched blocks are :
+1st program : 
+Line 32:	mov r3,0
+Line 33:	mov r4,0
+Line 34:	b .bfiller
+
+2nd program : 
+Line 90:        mov r4,0
+Line 91:        mov r5,0
+Line 92:        b .p_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 60:	mov r3,0x300
+Line 61:	mov r4,0		//new i
+Line 62:	mov r5,0		//new j
+Line 63:	mov r6,0		//new k
+Line 64:	b .ichoose
+
+2nd program : 
+Line 41:	mov r4,0
+Line 42:	mov r5,0
+Line 43:	mov r6,0
+Line 44:	mov r7,0
+Line 45:	b .nested_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 95:	mov r6,0
+Line 96:	mov r8,0
+Line 97:	b .kchoose
+
+2nd program : 
+Line 90:        mov r4,0
+Line 91:        mov r5,0
+Line 92:        b .p_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 102:	mul r7,r4,r10
+Line 103:	add r7,r7,r6
+Line 104:	mul r7,r7,4
+Line 105:	add r7,r7,r1 
+Line 106:	ld r7,0[r7] // load A[i][k]
+Line 107:	mul r9,r6,r10
+Line 108:	add r9,r9,r5
+Line 109:	mul r9,r9,4
+Line 110:	add r9,r9,r2
+Line 111:	ld r9,0[r9] // load B[k][j]
+Line 112:	mul r7,r7,r9 
+Line 113:	add r8,r7,r8 // add n elements that we get as product
+Line 114:	add r6,r6,1
+Line 115:	b .kchoose
+
+2nd program : 
+Line 74:		mul r8,r0,r4
+Line 75:		add r8,r8,r6
+Line 76:		mul r8,r8,4
+Line 77:		add r9,r1,r8
+Line 78:		ld r10,0[r9]
+Line 79:		mul r8,r0,r6
+Line 80:		add r8,r8,r5
+Line 81:		mul r8,r8,4
+Line 82:		add r9,r2,r8
+Line 83:		ld r11,0[r9]
+Line 84:		mul r11,r10,r11
+Line 85:		add r7,r7,r11
+Line 86:		add r6,r6,1
+Line 87:		b .nested_nested_C		
+
+

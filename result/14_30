@@ -1,0 +1,180 @@
+(14,30)
+test/assignment3/matrix.txt.txt
+test/assignment3/csl211_3_edited.s
+Match - 40.5714%
+
+The matched blocks are :
+1st program : 
+Line 2:	mov r8,0x100     //base index of matrix A
+Line 3:	mov r2,0  //index i
+Line 4:	mov r3,0  //index j
+Line 5:	mov r5,3	//size of matrix
+Line 6:	sub r12,r5,1 //size of matrix -1
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 29:      add r4,r4,1
+Line 30:      mov r5,0 
+Line 31:      b .outer_loop
+
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 57:     add r4,r4,1
+Line 58:     mov r5,0
+Line 59:     b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 100:    add r4,r4,1
+Line 101:    mov r5,0 
+Line 102:    b .floop1   
+
+
+The matched blocks are :
+1st program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+2nd program : 
+Line 123:    add r4,r4,1
+Line 124:    mov r5,0
+Line 125:    b .finalloop1
+
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 7:    mov r4,0           //i index
+Line 8:    mov r5,0          //j index
+Line 9:    sub r8,r0,1
+
+
+The matched blocks are :
+1st program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+2nd program : 
+Line 61:    mov r4,0
+Line 62:    mov r5,0
+Line 63:    mov r6,0
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 29:      add r4,r4,1
+Line 30:      mov r5,0 
+Line 31:      b .outer_loop
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 57:     add r4,r4,1
+Line 58:     mov r5,0
+Line 59:     b .loop1
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 100:    add r4,r4,1
+Line 101:    mov r5,0 
+Line 102:    b .floop1   
+
+
+The matched blocks are :
+1st program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+2nd program : 
+Line 123:    add r4,r4,1
+Line 124:    mov r5,0
+Line 125:    b .finalloop1
+
+
+The matched blocks are :
+1st program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+2nd program : 
+Line 2:    mov r0,3                 //size of matrix in r0   
+Line 3:    mov r1,0x100             //base address of matrix A
+Line 4:    mov r2,0x200             //base address of matrix B
+Line 5:    mov r3,0x300             //base address of matrix C
+
+
+The matched blocks are :
+1st program : 
+Line 66:		cmp r3,r12         //j<=n-1
+Line 67:		mov r13,0           //assigning r13=0 
+Line 68:		bgt .break6
+
+2nd program : 
+Line 68:          cmp r0,r5
+Line 69:          mov r11,0             //Register to store the sum
+Line 70:          beq .return2
+
+

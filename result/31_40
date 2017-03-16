@@ -1,0 +1,61 @@
+(31,40)
+test/assignment3/matrix(1).s
+test/assignment3/ranjan.s
+Match - 23.0769%
+
+The matched blocks are :
+1st program : 
+Line 74:		mul r8,r0,r4
+Line 75:		add r8,r8,r6
+Line 76:		mul r8,r8,4
+Line 77:		add r9,r1,r8
+Line 78:		ld r10,0[r9]
+Line 79:		mul r8,r0,r6
+Line 80:		add r8,r8,r5
+Line 81:		mul r8,r8,4
+Line 82:		add r9,r2,r8
+Line 83:		ld r11,0[r9]
+Line 84:		mul r11,r10,r11
+Line 85:		add r7,r7,r11
+Line 86:		add r6,r6,1
+Line 87:		b .nested_nested_C		
+
+2nd program : 
+Line 40:	mul r7,r4,r0
+Line 41:	add r7,r7,r6
+Line 42:	mul r7,r7,4    @calculating index for A[i][r6]
+Line 43:	add r10,r7,r1
+Line 44:	ld r8,[r10]  @load it from memory in r8
+Line 45:	mul r7,r6,r0
+Line 46:	add r7,r7,r5
+Line 47:	mul r7,r7,4    @calculating index for B[r6][j]
+Line 48:	add r10,r7,r2
+Line 49:	ld r9,0[r10]    @load it from memory in r9
+Line 50:	mul r8,r8,r9
+Line 51:	add r11,r11,r8   @sum
+Line 52:	add r6,r6,1   @increasing index for multiply
+Line 53:	b .loop5
+
+
+The matched blocks are :
+1st program : 
+Line 106:            mul r6,r0,r4
+Line 107:            add r6,r6,r5
+Line 108:            mul r6,r6,4
+Line 109:            add r7,r3,r6
+Line 110:            ld r9,0[r7]
+Line 111:            .print r9
+Line 112:            add r5,r5,1
+Line 113:            b .p_nested_C
+
+2nd program : 
+Line 55:	mul r7,r0,r4
+Line 56:	add r7,r7,r5
+Line 57:	mul r7,r7,4   @calculating index of C[i][j]
+Line 58:	add r8,r7,r3
+Line 59:	st r11,[r8]   @storing it to memory
+Line 60:	.print r11
+Line 61:	add r5,r5,1    @increasing j
+Line 62:	b .loop3   @comparing i to N if it is equal return to main
+
+

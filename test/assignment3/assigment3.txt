@@ -1,0 +1,106 @@
+ .main:
+mov r0,3
+mov r1,0x100
+mov r2,0x200
+mov r3,0x300
+mov r4,1
+mov r5,1
+
+.loop1:
+cmp r4,r0
+bgt .loop4
+b .loop2
+
+.loop2:
+cmp r5,r0
+bgt .loop3
+
+sub r6,r4,1
+mul r6,r6,r0
+sub r7,r5,1
+add r6,r6,r7
+mul r6,r6,4
+add r6,r6,r1
+add r7,r4,r5
+st r7,[r6]
+
+sub r6,r4,1
+mul r6,r6,r0
+sub r7,r5,1
+add r6,r6,r7
+mul r6,r6,4
+add r6,r6,r2
+mul r8,r4,2
+mul r9,r5,3
+add r7,r8,r9
+st r7,[r6]
+
+
+
+add r5,r5,1
+b .loop2
+
+.loop3:
+ add r4,r4,1
+mov r5,1
+b .loop1
+
+.loop4:
+mov r4,1
+mov r5,1
+mov r6,1
+b .loop5
+
+.loop5:
+cmp r4,r0
+bgt .exit
+b .loop6
+
+.loop6:
+cmp r5,r0
+mov r11,0
+bgt .icr
+b .loop7
+
+.icr:
+add r4,r4,1
+mov r5,1
+b .loop5
+
+.loop7:
+cmp r6,r0
+bgt .icr1
+ sub r7,r4,1
+ mul r7,r7,r0
+sub r8,r6,1
+add r7,r7,r8
+mul r7,r7,4
+add r7,r7,r1
+ld r8,[r7]
+
+sub r7,r6,1
+mul r7,r7,r0
+sub r9,r5,1
+add r7,r7,r9
+mul r7,r7,4
+add r7,r7,r2
+ld r9,[r7]
+
+mul r8,r8,r9
+add r11,r11,r8
+add r6,r6,1
+b .loop7
+.icr1:
+add r5,r5,1
+mov r6,1
+sub r7,r4,1
+mul r7,r7,r0
+sub r8,r5,1
+add r7,r7,r8
+mul r7,r7,4
+add r7,r7,r3
+st r11,[r7]
+.print r11
+b .loop6
+
+.exit:

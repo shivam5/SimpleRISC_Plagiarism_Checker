@@ -1,0 +1,77 @@
+(4,8)
+test/assignment3/archi_assign3.asm
+test/assignment3/2015csb1032.asm
+Match - 13.0435%
+
+The matched blocks are :
+1st program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+2nd program : 
+Line 37:.jfail : mov r5,0
+Line 38:cmp r4,r11
+Line 39:BEQ .ifail
+
+
+The matched blocks are :
+1st program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+2nd program : 
+Line 93:.jfail1 : mov r5,0
+Line 94:cmp r4,r11
+Line 95:BEQ .ifail1
+
+
+The matched blocks are :
+1st program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+2nd program : 
+Line 37:.jfail : mov r5,0
+Line 38:cmp r4,r11
+Line 39:BEQ .ifail
+
+
+The matched blocks are :
+1st program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+2nd program : 
+Line 93:.jfail1 : mov r5,0
+Line 94:cmp r4,r11
+Line 95:BEQ .ifail1
+
+
+The matched blocks are :
+1st program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+2nd program : 
+Line 37:.jfail : mov r5,0
+Line 38:cmp r4,r11
+Line 39:BEQ .ifail
+
+
+The matched blocks are :
+1st program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+2nd program : 
+Line 93:.jfail1 : mov r5,0
+Line 94:cmp r4,r11
+Line 95:BEQ .ifail1
+
+

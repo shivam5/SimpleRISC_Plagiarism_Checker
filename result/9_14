@@ -1,0 +1,46 @@
+(9,14)
+test/assignment3/matrix.s
+test/assignment3/matrix.txt.txt
+Match - 10.241%
+
+The matched blocks are :
+1st program : 
+Line 35:	add r4,r4,1
+Line 36:	mov r5,0
+Line 37:	b .loop
+
+2nd program : 
+Line 24:	add r2,r2,1	//i++
+Line 25:	mov r3,0         //j=0 again
+Line 26:	b .loop1        //going to loop 1 
+
+
+The matched blocks are :
+1st program : 
+Line 35:	add r4,r4,1
+Line 36:	mov r5,0
+Line 37:	b .loop
+
+2nd program : 
+Line 50:	add r2,r2,1	//i++
+Line 51:	mov r3,0        //j=0 again
+Line 52:	b .loop3        //goint to loop 3
+
+
+The matched blocks are :
+1st program : 
+Line 119:     mov r4,0
+Line 120:     mov r5,0
+Line 121:     mov r1, 0x100
+Line 122:     mov r2, 0x200
+Line 123:     mov r3, 0x300
+Line 124:     b .loop4
+
+2nd program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+

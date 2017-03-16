@@ -1,0 +1,106 @@
+(4,12)
+test/assignment3/archi_assign3.asm
+test/assignment3/2015csb1034labassignment3.txt
+Match - 22.4806%
+
+The matched blocks are :
+1st program : 
+Line 4:	mov r1,0x100
+Line 5:	mov r2,0x200
+Line 6:	mov r3,0x300
+Line 7:	mov r4,-1       	/*r4 is i*/
+Line 8:	mov r5,0		/*r5 is j*/
+
+2nd program : 
+Line 2:mov r0,2     @N
+Line 3:mov r1,0x100 @A
+Line 4:mov r2,0x200 @B
+Line 5:mov r12,0x300
+Line 10:mov r10,1
+Line 11:mov r5,0
+
+
+The matched blocks are :
+1st program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+2nd program : 
+Line 35:add r3,r3,1
+Line 36:cmp r0,r3
+Line 37:bgt .loop_1
+
+
+The matched blocks are :
+1st program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+2nd program : 
+Line 68:add r3,r3,1
+Line 69:cmp r0,r3
+Line 70:bgt .loop_3
+
+
+The matched blocks are :
+1st program : 
+Line 33:	mov r4,-1
+Line 34:	mov r5,0
+Line 35:	mov r6,0				/* r6 is k */
+
+2nd program : 
+Line 38:mov r3,0
+Line 39:mov r4,0
+Line 40:mov r5,0
+
+
+The matched blocks are :
+1st program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+2nd program : 
+Line 35:add r3,r3,1
+Line 36:cmp r0,r3
+Line 37:bgt .loop_1
+
+
+The matched blocks are :
+1st program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+2nd program : 
+Line 68:add r3,r3,1
+Line 69:cmp r0,r3
+Line 70:bgt .loop_3
+
+
+The matched blocks are :
+1st program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+2nd program : 
+Line 35:add r3,r3,1
+Line 36:cmp r0,r3
+Line 37:bgt .loop_1
+
+
+The matched blocks are :
+1st program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+2nd program : 
+Line 68:add r3,r3,1
+Line 69:cmp r0,r3
+Line 70:bgt .loop_3
+
+

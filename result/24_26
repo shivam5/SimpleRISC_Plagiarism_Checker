@@ -1,0 +1,75 @@
+(24,26)
+test/assignment3/NIKHIL_N_2015csb1020.s
+test/assignment3/HWStartwith0.s
+Match - 21.1429%
+
+The matched blocks are :
+1st program : 
+Line 45:  mov r7,0
+Line 46:  mov r8,0
+Line 47:   mov r5,0
+
+2nd program : 
+Line 32:	mov r3,0
+Line 33:	mov r4,0
+Line 34:	b .bfiller
+
+
+The matched blocks are :
+1st program : 
+Line 45:  mov r7,0
+Line 46:  mov r8,0
+Line 47:   mov r5,0
+
+2nd program : 
+Line 95:	mov r6,0
+Line 96:	mov r8,0
+Line 97:	b .kchoose
+
+
+The matched blocks are :
+1st program : 
+Line 68:     mul r9,r7,r0
+Line 69:     add r9,r9,r5
+Line 70:     mul r9,r9,4
+Line 71:     add r9,r9,r2
+Line 72:     ld  r12,[r9]
+Line 73:     mul r9,r5,r0
+Line 74:     add r9,r9,r8
+Line 78:     mul r9,r9,4
+Line 79:     add r9,r9,r1
+Line 80:     ld  r13,[r9]
+Line 81:     mul r13,r12,r13
+Line 82:    add r4,r4,r13
+Line 83:   add r5,r5,1
+Line 84:   b .lloop3
+
+2nd program : 
+Line 102:	mul r7,r4,r10
+Line 103:	add r7,r7,r6
+Line 104:	mul r7,r7,4
+Line 105:	add r7,r7,r1 
+Line 106:	ld r7,0[r7] // load A[i][k]
+Line 107:	mul r9,r6,r10
+Line 108:	add r9,r9,r5
+Line 109:	mul r9,r9,4
+Line 110:	add r9,r9,r2
+Line 111:	ld r9,0[r9] // load B[k][j]
+Line 112:	mul r7,r7,r9 
+Line 113:	add r8,r7,r8 // add n elements that we get as product
+Line 114:	add r6,r6,1
+Line 115:	b .kchoose
+
+
+The matched blocks are :
+1st program : 
+Line 86:     st r4,[r11]
+Line 87:    add r8,r8,1
+Line 88:     b .lloop2
+
+2nd program : 
+Line 69:	call .jcaller	//go to j loop
+Line 70:	add r4,r4,1
+Line 71:	b .ichoose
+
+

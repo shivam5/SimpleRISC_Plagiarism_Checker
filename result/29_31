@@ -1,0 +1,93 @@
+(29,31)
+test/assignment3/Uneet_2015csb1038Ass3.s.s
+test/assignment3/matrix(1).s
+Match - 24.7126%
+
+The matched blocks are :
+1st program : 
+Line 30:	mov r6,0
+Line 31:	add r5,r5,1              //i=i+1
+Line 32:	b .loop1r1
+
+2nd program : 
+Line 90:        mov r4,0
+Line 91:        mov r5,0
+Line 92:        b .p_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 61:	mov r6,0
+Line 62:	add r5,r5,1
+Line 63:	b .loop1r2
+
+2nd program : 
+Line 90:        mov r4,0
+Line 91:        mov r5,0
+Line 92:        b .p_nested_C
+
+
+The matched blocks are :
+1st program : 
+Line 66:	mov r5,0                   //set all the indexes to zero
+Line 67:	mov r6,0
+Line 68:	mov r7,0
+Line 69:	mov r8,0
+Line 70:	mov r10,0
+Line 71:	mov r11,0
+
+2nd program : 
+Line 7:    mov r1,0x100
+Line 8:    mov r2,0x200
+Line 9:    mov r3,0x300
+Line 10:    mov r4,0
+Line 11:    mov r5,0
+Line 12:    b .nested_assign_loop    
+
+
+The matched blocks are :
+1st program : 
+Line 87:	mul r8,r5,r0
+Line 88:	add r8,r8,r7
+Line 89:	mul r8,r8,4
+Line 90:	add r8,r8,r1
+Line 91:	ld r8,[r8]
+Line 93:	mul r9,r7,r0
+Line 94:	add r9,r9,r6
+Line 95:	mul r9,r9,4
+Line 96:	add r9,r9,r2
+Line 97:	ld r9,[r9]
+Line 99:	mul r9,r9,r8           // multipl A and B
+Line 100:	add r11,r11,r9         // sum=sum+mul(A,B)
+Line 101:	add r7,r7,1
+Line 102:	b .loopc3
+
+2nd program : 
+Line 74:		mul r8,r0,r4
+Line 75:		add r8,r8,r6
+Line 76:		mul r8,r8,4
+Line 77:		add r9,r1,r8
+Line 78:		ld r10,0[r9]
+Line 79:		mul r8,r0,r6
+Line 80:		add r8,r8,r5
+Line 81:		mul r8,r8,4
+Line 82:		add r9,r2,r8
+Line 83:		ld r11,0[r9]
+Line 84:		mul r11,r10,r11
+Line 85:		add r7,r7,r11
+Line 86:		add r6,r6,1
+Line 87:		b .nested_nested_C		
+
+
+The matched blocks are :
+1st program : 
+Line 117:	mov r6,0                 
+Line 118:	add r5,r5,1
+Line 119:	b .loopc1
+
+2nd program : 
+Line 90:        mov r4,0
+Line 91:        mov r5,0
+Line 92:        b .p_nested_C
+
+

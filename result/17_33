@@ -1,0 +1,101 @@
+(17,33)
+test/assignment3/FinalCompltedHOMEWORK3.txt
+test/assignment3/assignment.s
+Match - 29.4479%
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 20:add r1,r1,1
+Line 21:cmp r0,r1
+Line 22:bgt .loop
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 42:add r1,r1,1
+Line 43:cmp r0,r1
+Line 44:bgt .loopb
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 78:add r1,r1,1
+Line 79:cmp r0,r1
+Line 80:bgt .loope
+
+
+The matched blocks are :
+1st program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+2nd program : 
+Line 96:add r1,r1,1
+Line 97:cmp r0,r1
+Line 98:bgt .loopx
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 20:add r1,r1,1
+Line 21:cmp r0,r1
+Line 22:bgt .loop
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 42:add r1,r1,1
+Line 43:cmp r0,r1
+Line 44:bgt .loopb
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 78:add r1,r1,1
+Line 79:cmp r0,r1
+Line 80:bgt .loope
+
+
+The matched blocks are :
+1st program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+2nd program : 
+Line 96:add r1,r1,1
+Line 97:cmp r0,r1
+Line 98:bgt .loopx
+
+

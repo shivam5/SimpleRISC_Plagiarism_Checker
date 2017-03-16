@@ -1,0 +1,119 @@
+(22,33)
+test/assignment3/array.txt
+test/assignment3/assignment.s
+Match - 41.0959%
+
+The matched blocks are :
+1st program : 
+Line 3:    mov r1,0x100
+Line 4:    mov r2,0x200
+Line 5:    mov r10,0x300
+Line 6:    mov r12,0
+Line 7:    mov r0,2
+Line 8:    mov r6,0
+
+2nd program : 
+Line 1:mov r0,4
+Line 2:mov r1,0
+Line 3:mov r2,0
+Line 4:mov r3,0x100
+Line 5:mov r4,0x200            @r3, r4,r5 are base addresses of a,b,c
+Line 6:mov r5,0x300
+
+
+The matched blocks are :
+1st program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+2nd program : 
+Line 20:add r1,r1,1
+Line 21:cmp r0,r1
+Line 22:bgt .loop
+
+
+The matched blocks are :
+1st program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+2nd program : 
+Line 42:add r1,r1,1
+Line 43:cmp r0,r1
+Line 44:bgt .loopb
+
+
+The matched blocks are :
+1st program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+2nd program : 
+Line 78:add r1,r1,1
+Line 79:cmp r0,r1
+Line 80:bgt .loope
+
+
+The matched blocks are :
+1st program : 
+Line 41:       add r12,r12,1
+Line 42:       cmp r12,r0
+Line 43:       bgt .ret
+
+2nd program : 
+Line 96:add r1,r1,1
+Line 97:cmp r0,r1
+Line 98:bgt .loopx
+
+
+The matched blocks are :
+1st program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+2nd program : 
+Line 20:add r1,r1,1
+Line 21:cmp r0,r1
+Line 22:bgt .loop
+
+
+The matched blocks are :
+1st program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+2nd program : 
+Line 42:add r1,r1,1
+Line 43:cmp r0,r1
+Line 44:bgt .loopb
+
+
+The matched blocks are :
+1st program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+2nd program : 
+Line 78:add r1,r1,1
+Line 79:cmp r0,r1
+Line 80:bgt .loope
+
+
+The matched blocks are :
+1st program : 
+Line 48:     add r13,r13,1     
+Line 50:     cmp r13,r0
+Line 51:     bgt .loo3
+
+2nd program : 
+Line 96:add r1,r1,1
+Line 97:cmp r0,r1
+Line 98:bgt .loopx
+
+

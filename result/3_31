@@ -1,0 +1,61 @@
+(3,31)
+test/assignment3/Matrix_multiplication.s
+test/assignment3/matrix(1).s
+Match - 24.1758%
+
+The matched blocks are :
+1st program : 
+Line 73:MUL R5, R0, R1
+Line 74:ADD R5, R5, R8
+Line 75:MUL R5, R5, 4
+Line 76:ADD R5, R5, R3
+Line 78:LD R9, 0[R5]  //Loading A[i][k]
+Line 80:MUL R5, R0, R8
+Line 81:ADD R5, R5, R2
+Line 82:MUL R5, R5, 4
+Line 83:ADD R5, R5, R6
+Line 85:LD R10, 0[R5]  //Loading B[k][j]
+Line 87:MUL R9, R9, R10
+Line 88:ADD R4, R4, R9  //Adding to the sum.
+Line 90:ADD R8, R8, 1
+Line 91:B .inner_inner_loop_product_condition
+
+2nd program : 
+Line 74:		mul r8,r0,r4
+Line 75:		add r8,r8,r6
+Line 76:		mul r8,r8,4
+Line 77:		add r9,r1,r8
+Line 78:		ld r10,0[r9]
+Line 79:		mul r8,r0,r6
+Line 80:		add r8,r8,r5
+Line 81:		mul r8,r8,4
+Line 82:		add r9,r2,r8
+Line 83:		ld r11,0[r9]
+Line 84:		mul r11,r10,r11
+Line 85:		add r7,r7,r11
+Line 86:		add r6,r6,1
+Line 87:		b .nested_nested_C		
+
+
+The matched blocks are :
+1st program : 
+Line 125:MUL R5, R0, R1
+Line 126:ADD R5, R5, R2
+Line 127:MUL R5, R5, 4
+Line 128:ADD R5, R5, R7
+Line 130:LD R4, 0[R5]
+Line 132:.print R4
+Line 134:ADD R2, R2, 1
+Line 135:B .inner_loop_print_condition
+
+2nd program : 
+Line 106:            mul r6,r0,r4
+Line 107:            add r6,r6,r5
+Line 108:            mul r6,r6,4
+Line 109:            add r7,r3,r6
+Line 110:            ld r9,0[r7]
+Line 111:            .print r9
+Line 112:            add r5,r5,1
+Line 113:            b .p_nested_C
+
+

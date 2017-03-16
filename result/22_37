@@ -1,0 +1,65 @@
+(22,37)
+test/assignment3/array.txt
+test/assignment3/2015csb1117_matrix.asm
+Match - 16.6667%
+
+The matched blocks are :
+1st program : 
+Line 3:    mov r1,0x100
+Line 4:    mov r2,0x200
+Line 5:    mov r10,0x300
+Line 6:    mov r12,0
+Line 7:    mov r0,2
+Line 8:    mov r6,0
+
+2nd program : 
+Line 1:mov r0,4       @ order of matrix 
+Line 2:mov r1,0x100 	@base address of first matrix
+Line 3:mov r2,0x200 	@	       second	
+Line 4:mov r3,0x300 	@ 	       third	
+Line 5:mov r4,-1	   	@ index for rows
+Line 6:mov r5,0     	@ index for columns		
+
+
+The matched blocks are :
+1st program : 
+Line 11:   add r12,r12,1
+Line 12:   mov r13,1
+Line 13:   cmp r12,r0
+Line 14:   bgt .return
+
+2nd program : 
+Line 10:.loopi:	add r4,r4,1  		@ incrementing row
+Line 11:	mov r5,0	     		@ j=0 after row changes
+Line 12:	cmp r4,r0				
+Line 13:	beq .start			@ dat is matrix are ready
+
+
+The matched blocks are :
+1st program : 
+Line 11:   add r12,r12,1
+Line 12:   mov r13,1
+Line 13:   cmp r12,r0
+Line 14:   bgt .return
+
+2nd program : 
+Line 45:.iloop:	add r4,r4,1
+Line 46:	mov r5,-1 		
+Line 47:	cmp r4,r0		
+Line 48:	beq .exit	
+
+
+The matched blocks are :
+1st program : 
+Line 11:   add r12,r12,1
+Line 12:   mov r13,1
+Line 13:   cmp r12,r0
+Line 14:   bgt .return
+
+2nd program : 
+Line 89:	add r4,r4,1
+Line 90:	mov r5,0
+Line 91:	cmp r4,r0
+Line 92:	beq .end
+
+

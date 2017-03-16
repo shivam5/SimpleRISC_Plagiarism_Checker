@@ -1,0 +1,39 @@
+(3,21)
+test/assignment3/Matrix_multiplication.s
+test/assignment3/ArchiCode3.s
+Match - 16.568%
+
+The matched blocks are :
+1st program : 
+Line 73:MUL R5, R0, R1
+Line 74:ADD R5, R5, R8
+Line 75:MUL R5, R5, 4
+Line 76:ADD R5, R5, R3
+Line 78:LD R9, 0[R5]  //Loading A[i][k]
+Line 80:MUL R5, R0, R8
+Line 81:ADD R5, R5, R2
+Line 82:MUL R5, R5, 4
+Line 83:ADD R5, R5, R6
+Line 85:LD R10, 0[R5]  //Loading B[k][j]
+Line 87:MUL R9, R9, R10
+Line 88:ADD R4, R4, R9  //Adding to the sum.
+Line 90:ADD R8, R8, 1
+Line 91:B .inner_inner_loop_product_condition
+
+2nd program : 
+Line 59:                   mul r9,r0,r5
+Line 60:                   add r9,r9,r8
+Line 61:                   mul r9,r9,4
+Line 62:                   add r9,r9,r2                 //a ready
+Line 64:                   ld r10,[r9]                  //a ready
+Line 66:                   mul r11,r8,r0
+Line 67:                   add r11,r11,r7
+Line 68:                   mul r11,r11,4
+Line 69:                   add r11,r11,r3                //b ready
+Line 71:                   ld r12,[r11]                  //b ready
+Line 73:                   mul r13,r10,r12
+Line 74:                   add r14,r14,r13               //r14 final useful value to be stored
+Line 76:                   add r8,r8,1
+Line 77:             b .l3
+
+

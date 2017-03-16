@@ -1,0 +1,61 @@
+(6,14)
+test/assignment3/architec.txt
+test/assignment3/matrix.txt.txt
+Match - 18.4932%
+
+The matched blocks are :
+1st program : 
+Line 32:mov r5,0
+Line 33:add r4,r4,1
+Line 34:b .loop1
+
+2nd program : 
+Line 97:			mov r3,0                
+Line 98:			add r2,r2,1            // i++
+Line 99:			b .loop5               // going to loop 5
+
+
+The matched blocks are :
+1st program : 
+Line 40:mov r0,0x100
+Line 41:mov r1,0x200
+Line 42:mov r4,0
+Line 43:mov r5,0
+Line 44:mov r6,0
+
+2nd program : 
+Line 2:	mov r8,0x100     //base index of matrix A
+Line 3:	mov r2,0  //index i
+Line 4:	mov r3,0  //index j
+Line 5:	mov r5,3	//size of matrix
+Line 6:	sub r12,r5,1 //size of matrix -1
+
+
+The matched blocks are :
+1st program : 
+Line 40:mov r0,0x100
+Line 41:mov r1,0x200
+Line 42:mov r4,0
+Line 43:mov r5,0
+Line 44:mov r6,0
+
+2nd program : 
+Line 55:	mov r10,0x300            //base index of matrix C
+Line 56:	mov r2,0                 //i=0           
+Line 57:	mov r3,0                 //j=0
+Line 58:	mov r4,0                 // k=0
+Line 59:	mov r13,0
+
+
+The matched blocks are :
+1st program : 
+Line 83:mov r0,0x100
+Line 84:mov r1,0x200
+Line 85:mov r2,0x300
+
+2nd program : 
+Line 29:	mov r9,0x200        //base index of matrix B
+Line 30:	mov r2,0           //index i
+Line 31:	mov r3,0           //index j
+
+

@@ -1,0 +1,107 @@
+ .main:
+	mov r8,0x100     //base index of matrix A
+	mov r2,0  //index i
+	mov r3,0  //index j
+	mov r5,3	//size of matrix
+	sub r12,r5,1 //size of matrix -1
+.loop1:
+	cmp r2,r12   //i=0 to size of matrix-1
+	bgt .break1
+
+.loop2:
+		cmp r3,r12   	//j=0 to size of matrix -1
+		bgt .break2
+		mul r6,r2,r5  	//N*i
+		add r6,r6,r3    	//N*i + j
+		mul r6,r6,4	// (N*i+j)*4
+		add r6,r6,r8	//[r8+imm]
+		add r0,r2,r3	//i+j
+		st r0,0[r6]		//store r0 in memory address r6
+		//.print r0
+		add r3,r3,1	//j++
+		b .loop2
+.break2:
+	add r2,r2,1	//i++
+	mov r3,0         //j=0 again
+	b .loop1        //going to loop 1 
+
+.break1:
+	mov r9,0x200        //base index of matrix B
+	mov r2,0           //index i
+	mov r3,0           //index j
+.loop3:
+	cmp r2,r12         //i=0 to size of matrix
+	bgt .break3
+	.loop4:
+		cmp r3,r12   	        //j=0 to size of matrix
+		bgt .break4
+		mul r6,r2,r5  	        //N*i
+		add r6,r6,r3           	//N*i + j
+		mul r6,r6,4	        // (N*i+j)*4
+		add r6,r6,r9	        //[r9+imm]
+		mul r11,r2,2	        //2i
+		mul r13,r3,3	        //3j
+		add r0,r11,r13	        //2i+3j
+		st r0,0[r6]		//store r0 in memory address r6
+		//.print r0
+		add r3,r3,1	        //j++
+		b .loop4
+.break4:
+	add r2,r2,1	//i++
+	mov r3,0        //j=0 again
+	b .loop3        //goint to loop 3
+
+.break3: 
+	mov r10,0x300            //base index of matrix C
+	mov r2,0                 //i=0           
+	mov r3,0                 //j=0
+	mov r4,0                 // k=0
+	mov r13,0
+	
+	
+.loop5:
+	cmp r2,r12              //i=0 to size if matrix
+	bgt .break5
+	.loop6:
+		cmp r3,r12         //j<=n-1
+		mov r13,0           //assigning r13=0 
+		bgt .break6
+		.loop7:
+			cmp r4,r12         //k<=size of matrix -1
+			bgt .break7
+			mul r6,r2,r5        // i*size of matrix
+			add r6,r6,r4        // (i*N+k)   ,N is size of matrix
+			mul r6,r6,4         //(i*N+k)*4
+			add r6,r6,r8        //
+			ld r0,0[r6]         //r0=A[i][k]
+			mul r7,r4,r5        
+			add r7,r7,r3
+			mul r7,r7,4         //(k*n+j)*4
+			add r7,r7,r9
+			ld r1,0[r7]          //r1=B[k][j]
+			mul r6,r1,r0        //product
+			add r13,r13,r6
+			add r4,r4,1
+			b .loop7
+		.break7:
+			   mov r4,0             //k=0 again
+			   mul r6,r2,r5         
+			   add r6,r6,r3
+			   mul r6,r6,4            
+			   add r6,r6,r10         // r6 is the index in matrix C where we have to store r13
+			   st r13,0[r6]         //storing r13 in matrix C at the corresponding index of C
+			   .print r13           
+   			   add r3,r3,1          // j++
+			   b .loop6             //going to loop 6
+		.break6:
+			mov r3,0                
+			add r2,r2,1            // i++
+			b .loop5               // going to loop 5
+			
+		
+.break5:
+		
+		
+		
+		
+		

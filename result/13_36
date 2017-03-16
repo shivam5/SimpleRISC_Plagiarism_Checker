@@ -1,0 +1,64 @@
+(13,36)
+test/assignment3/2015CSB1010.s
+test/assignment3/archi3.s
+Match - 12.1951%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r0,3			@ size of matrix
+Line 3:mov r1,0x100		@ addr of A[0][0]
+Line 4:mov r2,0x200		@ addr of B[0][0]
+Line 5:mov r3,0x300		@ addr of C[0][0]
+Line 6:mov r4,0			@ row iterator
+Line 7:mov r5,0			@ col iterator
+
+2nd program : 
+Line 2:mov r0,3
+Line 3:mov r1,0x100
+Line 4:mov r2,0x200
+Line 5:mov r13,0x300
+Line 7:mov r5,0
+
+
+The matched blocks are :
+1st program : 
+Line 78:	mul r8,r0,r4
+Line 79:	add r8,r8,r5
+Line 80:	mul r8,r8,4
+Line 81:	add r8,r8,r3
+Line 82:	st r11,[r8]	@ storing in C
+Line 83:	add r5,r5,1
+Line 84:	b .lp2
+
+2nd program : 
+Line 73:mul r8,r4,r0
+Line 74:add r8,r8,r5
+Line 75:lsl r8,r8,2
+Line 76:add r8,r8,r13
+Line 77:st r7,0[r8]
+Line 78:add r5,r5,1
+Line 79:b .loop3
+
+
+The matched blocks are :
+1st program : 
+Line 102:	mul r6,r4,r0
+Line 103:	add r6,r6,r5
+Line 104:	mul r6,r6,4
+Line 105:	add r6,r6,r3
+Line 106:	ld r7,[r6]
+Line 107:	.print r7			@ printing C[i][j]
+Line 108:	add r5,r5,1
+Line 109:	b .pt2
+
+2nd program : 
+Line 97:mul r6,r4,r0
+Line 98:add r6,r6,r5
+Line 100:lsl r6,r6,2
+Line 101:add r6,r6,r13
+Line 103:ld r10,0[r6]
+Line 104:.print r10
+Line 106:add r5,r5,1
+Line 107:b .loop6
+
+

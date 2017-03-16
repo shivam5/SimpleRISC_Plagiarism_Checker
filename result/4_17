@@ -1,0 +1,105 @@
+(4,17)
+test/assignment3/archi_assign3.asm
+test/assignment3/FinalCompltedHOMEWORK3.txt
+Match - 19.2053%
+
+The matched blocks are :
+1st program : 
+Line 4:	mov r1,0x100
+Line 5:	mov r2,0x200
+Line 6:	mov r3,0x300
+Line 7:	mov r4,-1       	/*r4 is i*/
+Line 8:	mov r5,0		/*r5 is j*/
+
+2nd program : 
+Line 2:       mov r0,3   @N
+Line 3:       mov r1,0x100    
+Line 4:       mov r2,0x200    
+Line 5:       mov r3,0x300
+Line 6:       add r13,r0,1
+
+
+The matched blocks are :
+1st program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 10:	add r4,r4,1	
+Line 11:	cmp r4,r0
+Line 12:	beq .continue
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 33:	mov r4,-1
+Line 34:	mov r5,0
+Line 35:	mov r6,0				/* r6 is k */
+
+2nd program : 
+Line 50:       mov r4,0  @i
+Line 51:       mov r5,0  @j
+Line 52:       mov r6,0  @k
+
+
+The matched blocks are :
+1st program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 37:	add r4,r4,1			/* r4 is i*/
+Line 38:	cmp r4,r0				/*if i<n then continue*/
+Line 39:	beq .return
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+
+The matched blocks are :
+1st program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+2nd program : 
+Line 19:        add r4,r4,1
+Line 20:        cmp r4,r0
+Line 22:        bgt .next
+
+
+The matched blocks are :
+1st program : 
+Line 43:		add r5,r5,1		/*r5 if j*/
+Line 44:		cmp r5,r0			/*if j<n then continue*/
+Line 45:		beq .loopc1
+
+2nd program : 
+Line 79:        add r4,r4,1
+Line 80:        cmp r4,r0
+Line 82:        bgt .exit
+
+

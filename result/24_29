@@ -1,0 +1,93 @@
+(24,29)
+test/assignment3/NIKHIL_N_2015csb1020.s
+test/assignment3/Uneet_2015csb1038Ass3.s.s
+Match - 30.0613%
+
+The matched blocks are :
+1st program : 
+Line 2:  mov r2,0x100
+Line 3:  mov r1,0x200
+Line 4:  mov r3,0x300
+Line 5:  mov r7,0
+Line 6:  mov r8,0
+Line 7:  mov r0,4
+
+2nd program : 
+Line 66:	mov r5,0                   //set all the indexes to zero
+Line 67:	mov r6,0
+Line 68:	mov r7,0
+Line 69:	mov r8,0
+Line 70:	mov r10,0
+Line 71:	mov r11,0
+
+
+The matched blocks are :
+1st program : 
+Line 68:     mul r9,r7,r0
+Line 69:     add r9,r9,r5
+Line 70:     mul r9,r9,4
+Line 71:     add r9,r9,r2
+Line 72:     ld  r12,[r9]
+Line 73:     mul r9,r5,r0
+Line 74:     add r9,r9,r8
+Line 78:     mul r9,r9,4
+Line 79:     add r9,r9,r1
+Line 80:     ld  r13,[r9]
+Line 81:     mul r13,r12,r13
+Line 82:    add r4,r4,r13
+Line 83:   add r5,r5,1
+Line 84:   b .lloop3
+
+2nd program : 
+Line 87:	mul r8,r5,r0
+Line 88:	add r8,r8,r7
+Line 89:	mul r8,r8,4
+Line 90:	add r8,r8,r1
+Line 91:	ld r8,[r8]
+Line 93:	mul r9,r7,r0
+Line 94:	add r9,r9,r6
+Line 95:	mul r9,r9,4
+Line 96:	add r9,r9,r2
+Line 97:	ld r9,[r9]
+Line 99:	mul r9,r9,r8           // multipl A and B
+Line 100:	add r11,r11,r9         // sum=sum+mul(A,B)
+Line 101:	add r7,r7,1
+Line 102:	b .loopc3
+
+
+The matched blocks are :
+1st program : 
+Line 86:     st r4,[r11]
+Line 87:    add r8,r8,1
+Line 88:     b .lloop2
+
+2nd program : 
+Line 30:	mov r6,0
+Line 31:	add r5,r5,1              //i=i+1
+Line 32:	b .loop1r1
+
+
+The matched blocks are :
+1st program : 
+Line 86:     st r4,[r11]
+Line 87:    add r8,r8,1
+Line 88:     b .lloop2
+
+2nd program : 
+Line 61:	mov r6,0
+Line 62:	add r5,r5,1
+Line 63:	b .loop1r2
+
+
+The matched blocks are :
+1st program : 
+Line 86:     st r4,[r11]
+Line 87:    add r8,r8,1
+Line 88:     b .lloop2
+
+2nd program : 
+Line 117:	mov r6,0                 
+Line 118:	add r5,r5,1
+Line 119:	b .loopc1
+
+

@@ -1,0 +1,49 @@
+(1,4)
+test/assignment3/matrix1.s
+test/assignment3/archi_assign3.asm
+Match - 11.6438%
+
+The matched blocks are :
+1st program : 
+Line 2:mov r13,3
+Line 3:mov r0,0
+Line 4:mov r3,0x100
+Line 5:mov r4,0x200
+Line 6:mov r5,0x300
+
+2nd program : 
+Line 4:	mov r1,0x100
+Line 5:	mov r2,0x200
+Line 6:	mov r3,0x300
+Line 7:	mov r4,-1       	/*r4 is i*/
+Line 8:	mov r5,0		/*r5 is j*/
+
+
+The matched blocks are :
+1st program : 
+Line 42:	mov r0,0
+Line 43:	mov r3,0x100
+Line 44:	mov r4,0x200
+Line 45:	mov r5,0x300
+
+2nd program : 
+Line 4:	mov r1,0x100
+Line 5:	mov r2,0x200
+Line 6:	mov r3,0x300
+Line 7:	mov r4,-1       	/*r4 is i*/
+Line 8:	mov r5,0		/*r5 is j*/
+
+
+The matched blocks are :
+1st program : 
+Line 42:	mov r0,0
+Line 43:	mov r3,0x100
+Line 44:	mov r4,0x200
+Line 45:	mov r5,0x300
+
+2nd program : 
+Line 33:	mov r4,-1
+Line 34:	mov r5,0
+Line 35:	mov r6,0				/* r6 is k */
+
+
